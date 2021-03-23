@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Andrey Vetrov](https://up.htmlacademy.ru/adaptive/22/user/1691655).
-* Наставник: `Неизвестно`.
+* Наставник: [Мария Белогубова](https://htmlacademy.ru/profile/id87018).
 
 ---
 
