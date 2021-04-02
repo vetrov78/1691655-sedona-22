@@ -59,8 +59,9 @@
 
       <hr>
       <section class="feedback-form-wrapper">
+        <h2 class="vissually-hidden">Форма отзыва</h2>
         <form method="get" class="feedback-form" action="https://echo.htmlacademy.ru">
-
+          <h3>Представьтесь:</h3>
           <label for="Name">ИМЯ*:</label>
           <input type="text" name="Name" id="Name" value="Петр" required>
           <br>
@@ -69,6 +70,13 @@
           <br>
           <label for="Middlename">Отчество:</label>
           <input type="text" name="Middlename" id="Middlename" value="Александрович">
+          <hr>
+          <h3>Контактная информация:</h3>
+          <label for="Phone">Контактный телефон*:</label>
+          <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="Phone" id="Phone" placeholder="Введите телефон" required>
+          <br>
+          <label for="Mail">Электронная почта*:</label>
+          <input type="email" pattern=pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="Mail" id="Mail" placeholder="Введите e-mail" required>
           <hr>
 
           <button class="feedback-form__button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
