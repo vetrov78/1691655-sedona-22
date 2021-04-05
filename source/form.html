@@ -61,43 +61,64 @@
 
       <section class="feedback-form-wrapper">
         <h2 class="vissually-hidden">Форма отзыва</h2>
-        <form method="get" class="feedback-form" action="https://echo.htmlacademy.ru">
-          <h3>Представьтесь:</h3>
-          <label for="name">ИМЯ*:</label>
-          <input type="text" name="name" id="name" value="Петр" required>
-          <label for="surname">ФАМИЛИЯ*:</label>
-          <input type="text" name="surname" id="surname" value="Иванов" required>
-          <label for="middlename">Отчество:</label>
-          <input type="text" name="middlename" id="middlename" value="Александрович">
-          <hr>
-          <h3>Контактная информация:</h3>
-          <label for="phone">Контактный телефон*:</label>
-          <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" id="phone" placeholder="Введите телефон" required>
-          <label for="mail">Электронная почта*:</label>
-          <input type="email" pattern=pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="mail" id="mail" placeholder="Введите e-mail" required>
-          <hr>
-          <h3>ВАше Общее впечатление:</h3>
-          <input type="radio" name="impression" id="positive" checked>
-          <label for="positive">Скорее положительное</label>
-          <input type="radio" name="impression" id="negative">
-          <label for="negative">Скорее отрицательное</label>
-          <input type="radio" name="impression" id="no-exact">
-          <label for="no-exact">Затрудняюсь ответить</label>
-          <hr>
-          <h3>посещенные<br>достопримечательности:</h3>
-          <input type="checkbox" name="attraction" id="diablo-bridge" checked>
-          <label for="diablo-bridge">Мост Дьявола</label>
-          <input type="checkbox" name="attraction" id="bell-mountain" checked>
-          <label for="bell-mountain">Гора-Колокол</label>
-          <input type="checkbox" name="attraction" id="slide-park" checked>
-          <label for="slide-park">Слайд-парк</label>
-          <input type="checkbox" name="attraction" id="red-rocks">
-          <label for="red-rocks">Красные скалы</label>
-          <hr>
+
+        <form method="POST" class="feedback-form" action="https://echo.htmlacademy.ru">
+          <fieldset class="feedback-form__fieldset" name="name">
+            <legend class="feedback-form__legend">Представьтесь:</legend>
+
+            <label for="name">ИМЯ*:</label>
+            <input type="text" name="name" id="name" value="Петр" required>
+
+            <label for="surname">ФАМИЛИЯ*:</label>
+            <input type="text" name="surname" id="surname" value="Иванов" required>
+
+            <label for="middlename">Отчество:</label>
+            <input type="text" name="middlename" id="middlename" value="Александрович">
+          </fieldset>
+
+          <fieldset class="feedback-form__fieldset" name="contacts">
+            <legend class="feedback-form__legend">Контактная информация:</legend>
+
+            <label for="phone">Контактный телефон*:</label>
+            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" id="phone" placeholder="Введите телефон" required>
+
+            <label for="mail">Электронная почта*:</label>
+            <input type="email" pattern=pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="mail" id="mail" placeholder="Введите e-mail" required>
+          </fieldset>
+
+          <fieldset class="feedback-form__fieldset" name="impression">
+            <legend class="feedback-form__legend">ВАше Общее впечатление:</legend>
+
+            <input type="radio" name="impression" id="positive" checked>
+            <label for="positive">Скорее положительное</label>
+
+            <input type="radio" name="impression" id="negative">
+            <label for="negative">Скорее отрицательное</label>
+
+            <input type="radio" name="impression" id="no-exact">
+            <label for="no-exact">Затрудняюсь ответить</label>
+          </fieldset>
+
+          <fieldset class="feedback-form__fieldset" name="attractions">
+            <legend class="feedback-form__legend">посещенные<br>достопримечательности:</legend>
+
+            <input type="checkbox" name="attraction" id="diablo-bridge" checked>
+            <label for="diablo-bridge">Мост Дьявола</label>
+
+            <input type="checkbox" name="attraction" id="bell-mountain" checked>
+            <label for="bell-mountain">Гора-Колокол</label>
+
+            <input type="checkbox" name="attraction" id="slide-park" checked>
+            <label for="slide-park">Слайд-парк</label>
+
+            <input type="checkbox" name="attraction" id="red-rocks">
+            <label for="red-rocks">Красные скалы</label>
+          </fieldset>
+
           <h3>Опишите свои эмоции:</h3>
           <textarea rows="3">Опишите подробно все свои восторги </textarea>
-          <br>
-          <button class="feedback-form__button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+
+          <button class="feedback-form__button" type="submit">отправить отзыв</button>
         </form>
       </section>
 
