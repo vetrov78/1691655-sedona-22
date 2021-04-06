@@ -23,12 +23,12 @@
                 Главная
               </a>
             </li>
-            <li class="main-navigation__item">
+            <li class="main-navigation__item main-navigation__item--current">
               <a href="catalog.html">
                 Фото и видео
               </a>
             </li>
-            <li class="main-navigation__item main-navigation__item--current">
+            <li class="main-navigation__item">
               <a href="form.html">
                 Форма Отзыва
               </a>
@@ -45,81 +45,54 @@
 
     <main class="page-main">
 
-      <h1 class="visually-hidden">Оставьте свой отзыв о Седоне</h1>
+      <h1 class="visually-hidden">Фото и видео Седоны</h1>
 
       <section class="intro">
-        <h2 class="vissually-hidden">Предложение оставить отзыв</h2>
+        <h2 class="vissually-hidden">Предложение насладиться фотографиями Седоны</h2>
         <img class="intro__image" src="img/form-intro-background.jpg" width="902" height="214" alt="Приветственный рисунок">
         <img class="intro__image-text" src="img/form-intro-image-text.svg" width="229" height="39" alt="Приветственная надпись">
 
         <div class="intro-text">
-          <h3 class="intro-text__title">Оставьте свой отзыв</h3>
-          <p class="intro-text__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          <h3 class="intro-text__title">Фото и видео</h3>
+          <p class="intro-text__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике</p>
         </div>
         <hr>
       </section>
 
-      <section class="feedback-form-wrapper">
-        <h2 class="vissually-hidden">форма отзыва</h2>
+      <section class="photo">
+        <h2 class="vissually-hidden">Фотографии туристов</h2>
 
-        <form method="POST" class="feedback-form" action="https://echo.htmlacademy.ru">
-          <fieldset class="feedback-form__fieldset" name="name">
-            <legend class="feedback-form__legend">представьтесь:</legend>
+        <img class="photo__item" src="img/photo-1.jpg" width="280" height="280" alt="Дорога в прерии, уходящая на восход">
+        <h3 class="photo__title">неродные просторы</h3>
+        <p class="photo__author">Автор фото: Борис</p>
+        <div class="like">1350</div>
+        <hr>
 
-            <label for="name">имя*:</label>
-            <input type="text" name="name" id="name" value="Петр" required>
+        <img class="photo__item" src="img/photo-2.jpg" width="280" height="280" alt="Кактусы, на заднем плане скалы">
+        <h3 class="photo__title">Местная растительность</h3>
+        <p class="photo__author">Автор фото: Сергей</p>
+        <div class="like">143</div>
+        <hr>
 
-            <label for="surname">фамилия*:</label>
-            <input type="text" name="surname" id="surname" value="Иванов" required>
+        <img class="photo__item" src="img/photo-3.jpg" width="280" height="280" alt="Дорога, петляющая в лесистых горах">
+        <h3 class="photo__title">Дорога на север</h3>
+        <p class="photo__author">Автор фото: Петр</p>
+        <div class="like">96</div>
+        <hr>
 
-            <label for="middlename">отчество:</label>
-            <input type="text" name="middlename" id="middlename" value="Александрович">
-          </fieldset>
+        <img class="photo__item" src="img/photo-4.jpg" width="280" height="280" alt="Скалы, носящие имя мост дьявола">
+        <h3 class="photo__title">Мост дьявола</h3>
+        <p class="photo__author">Автор фото: Антон</p>
+        <div class="like">254</div>
+        <hr>
 
-          <fieldset class="feedback-form__fieldset" name="contacts">
-            <legend class="feedback-form__legend">контактная информация:</legend>
+      </section>
 
-            <label for="phone">контактный телефон*:</label>
-            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" id="phone" placeholder="Введите телефон" required>
-
-            <label for="mail">электронная почта*:</label>
-            <input type="email" pattern=pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="mail" id="mail" placeholder="Введите e-mail" required>
-          </fieldset>
-
-          <fieldset class="feedback-form__fieldset" name="impression">
-            <legend class="feedback-form__legend">ваше общее впечатление:</legend>
-
-            <input type="radio" name="impression" id="positive" checked>
-            <label for="positive">скорее положительное</label>
-
-            <input type="radio" name="impression" id="negative">
-            <label for="negative">скорее отрицательное</label>
-
-            <input type="radio" name="impression" id="no-exact">
-            <label for="no-exact">затрудняюсь ответить</label>
-          </fieldset>
-
-          <fieldset class="feedback-form__fieldset" name="attractions">
-            <legend class="feedback-form__legend">посещенные<br>достопримечательности:</legend>
-
-            <input type="checkbox" name="attraction" id="diablo-bridge" checked>
-            <label for="diablo-bridge">мост Дьявола</label>
-
-            <input type="checkbox" name="attraction" id="bell-mountain" checked>
-            <label for="bell-mountain">Гора-Колокол</label>
-
-            <input type="checkbox" name="attraction" id="slide-park" checked>
-            <label for="slide-park">слайд-парк</label>
-
-            <input type="checkbox" name="attraction" id="red-rocks">
-            <label for="red-rocks">Красные скалы</label>
-          </fieldset>
-
-          <h3>Опишите свои эмоции:</h3>
-          <textarea rows="3">Опишите подробно все свои восторги </textarea>
-
-          <button class="feedback-form__button" type="submit">отправить отзыв</button>
-        </form>
+      <section class="video">
+        <h2 class="vissually-hidden">Видеопрезентация Седоны</h2>
+        <h3>Все еще сомневаетесь?</h3>
+        <p>Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        <div class="video-container"></div>
       </section>
 
     </main>
@@ -166,19 +139,6 @@
         </a>
       </div>
     </footer>
-
-
-    <section class="modal modal-failture">
-      <h2>ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
-      <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button type="modal__button">OK</button>
-    </section>
-
-    <section class="modal modal-success">
-      <h2>Ваш отзыв отправлен!</h2>
-      <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-      <button type="modal__button">ЗАкРЫТЬ ОКНО</button>
-    </section>
 
   </body>
 </html>
