@@ -1,9 +1,8 @@
 .page-header {
   position: relative;
   outline: 1px solid blue;
+  min-width: 320px;
   height: 96px;
-  display: flex;
-  flex-direction: row;
 
   @media (max-width: @desktop-width) {
     height: 84px;
@@ -12,8 +11,6 @@
 
 .page-header__logo {
   position: absolute;
-
-  @media (max-width: @tablet-width) {
-    order: 2;
-  }
+  left: 50%;
+  transform: translateX(-50px);
 }
