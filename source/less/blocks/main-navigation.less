@@ -1,0 +1,17 @@
+.main-navigation {
+  margin: 0;
+  padding: 0;
+}
+
+.main-navigation__list {
+  border: 1px solid red;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: @mobile-width-only) {
+    background-color: @light-blue;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}

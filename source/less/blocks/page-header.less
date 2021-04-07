@@ -1,0 +1,19 @@
+.page-header {
+  position: relative;
+  outline: 1px solid blue;
+  height: 96px;
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: @desktop-width) {
+    height: 84px;
+  }
+}
+
+.page-header__logo {
+  position: absolute;
+
+  @media (max-width: @tablet-width) {
+    order: 2;
+  }
+}
