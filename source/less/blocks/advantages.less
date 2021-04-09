@@ -1,8 +1,26 @@
 .advantages__flex {
   display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.advantages__item {
+  background-color: @light-grey;
+  min-width: 256px;
 }
 
 .advantages__item--with-image {
   background-color: @light-blue;
   color: @basic-white;
+}
+
+.advantages__item--with-logo {
+  background-color: @basic-white;
+}
+
+.advantages__image {
+  background-color: @blue;
 }
