@@ -1,4 +1,6 @@
 .page-main__search-button {
+  cursor: pointer;
+
   width: 280px;
   font-size: 21px;
   font-weight: 700;
@@ -8,6 +10,10 @@
   border: none;
   padding-top: 14px;
   padding-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    width: 458px;
+  }
 }
 
 .page-main__map-image {
