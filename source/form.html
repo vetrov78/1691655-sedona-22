@@ -16,7 +16,7 @@
     <body class="page__body">
 
       <header class="page-header">
-        <a class="page-header__logo">
+        <a href="index.html" class="page-header__logo">
           <img src="img/logo.svg" width="101" height="84" alt="Логотип сайта">
         </a>
 
@@ -125,7 +125,7 @@
           </fieldset>
 
           <h3>Опишите свои эмоции:</h3>
-          <textarea rows="3">Опишите подробно все свои восторги </textarea>
+          <textarea class="feedback-form__text" rows="3">Опишите подробно все свои восторги </textarea>
 
           <button class="feedback-form__button" type="submit">отправить отзыв</button>
         </form>
@@ -176,16 +176,16 @@
       </div>
     </footer>
 
-    <section class="modal modal-failture">
+    <section class="modal modal--failture">
       <h2>ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
       <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button type="modal__button">OK</button>
+      <button class="modal__button modal__button--failture" type="button">OK</button>
     </section>
 
-    <section class="modal modal-success">
+    <section class="modal modal--success">
       <h2>Ваш отзыв отправлен!</h2>
       <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-      <button type="modal__button">ЗАкРЫТЬ ОКНО</button>
+      <button class="modal__button modal__button--success" type="button">ЗАкРЫТЬ ОКНО</button>
     </section>
 
   </body>
