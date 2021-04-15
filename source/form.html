@@ -8,15 +8,18 @@
   <body>
 
     <header class="page-header">
-      <a class="page-header__logo"></a>
 
-        <img src="img/logo.svg" width="101" height="84" alt="Логотип сайта">
-
-        <button class="main-navigation__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+      <header class="page-header">
+        <a href="index.html" class="page-header__logo">
+          <img src="img/logo.svg" width="101" height="84" alt="Логотип сайта">
+        </a>
 
         <nav class="main-navigation">
+
+          <button class="main-navigation__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
               <a href="index.html">
@@ -84,7 +87,7 @@
             <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" id="phone" placeholder="Введите телефон" required>
 
             <label for="mail">электронная почта*:</label>
-            <input type="email" pattern=pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="mail" id="mail" placeholder="Введите e-mail" required>
+            <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="mail" id="mail" placeholder="Введите e-mail" required>
           </fieldset>
 
           <fieldset class="feedback-form__fieldset" name="impression">
@@ -117,7 +120,7 @@
           </fieldset>
 
           <h3>Опишите свои эмоции:</h3>
-          <textarea rows="3">Опишите подробно все свои восторги </textarea>
+          <textarea class="feedback-form__text" rows="3">Опишите подробно все свои восторги </textarea>
 
           <button class="feedback-form__button" type="submit">отправить отзыв</button>
         </form>

@@ -1,0 +1,47 @@
+.feedback-form__fieldset {
+  border: none;
+
+  display: grid;
+}
+
+.feedback-form__legend{
+  font-weight: 700;
+}
+
+.feedback-form__input {
+  border: none;
+  background-color: @light-grey;
+  padding: 18px 10px 14px 22px;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.feedback-form__button {
+  cursor: pointer;
+
+  width: 280px;
+  padding-top: 18px;
+  padding-bottom: 13px;
+
+  font-size: 21px;
+  font-weight: 700;
+  color: @basic-white;
+  text-transform: uppercase;
+  background-color: @light-blue;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 480px;
+  }
+}
+
+.feedback-form__text {
+  background-color: @grey;
+  font: 700 18px "PT Sans";
+}
