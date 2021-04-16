@@ -11,47 +11,44 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
 
-
   <body class="page__body">
 
     <header class="page-header">
+      <a href="index.html" class="page-header__logo">
+        <img src="img/logo.svg" width="101" height="84" alt="Логотип сайта">
+      </a>
 
-      <header class="page-header">
-        <a href="index.html" class="page-header__logo">
-          <img src="img/logo.svg" width="101" height="84" alt="Логотип сайта">
-        </a>
+      <nav class="main-navigation">
 
-        <nav class="main-navigation">
+        <button class="main-navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
 
-          <button class="main-navigation__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-
-          <ul class="main-navigation__list">
-            <li class="main-navigation__item main-navigation__item--current">
-              <a href="index.html">
-                Главная
-              </a>
+        <ul class="main-navigation__list">
+          <li class="main-navigation__item main-navigation__item--current">
+            <a href="index.html">
+              Главная
+            </a>
+          </li>
+          <li class="main-navigation__item">
+            <a href="catalog.html">
+              Фото и видео
+            </a>
+          </li>
+          <li class="main-navigation__item">
+            <a>
+              Форма Отзыва
+            </a>
+          </li>
+          <li class="main-navigation__item">
+            <a href="https://htmlacademy.ru/" target="_blank">
+              HTML ACADEMY
+            </a>
             </li>
-            <li class="main-navigation__item">
-              <a href="catalog.html">
-                Фото и видео
-              </a>
-            </li>
-            <li class="main-navigation__item">
-              <a>
-                Форма Отзыва
-              </a>
-            </li>
-            <li class="main-navigation__item">
-              <a href="https://htmlacademy.ru/" target="_blank">
-                HTML ACADEMY
-              </a>
-              </li>
-          </ul>
-        </nav>
+        </ul>
+      </nav>
 
-      </header>
+    </header>
 
     <main class="page-main">
 
@@ -74,7 +71,7 @@
 
         <form method="POST" class="feedback-form" action="https://echo.htmlacademy.ru">
 
-          <fieldset class="feedback-form__fieldset" name="name">
+          <fieldset class="feedback-form__item feedback-form__item--1" name="name">
             <legend class="feedback-form__legend">представьтесь:</legend>
 
             <label class="feedback-form__label" for="name">имя*:</label>
@@ -87,7 +84,7 @@
             <input class="feedback-form__input" type="text" name="middlename" id="middlename" value="Александрович">
           </fieldset>
 
-          <fieldset class="feedback-form__fieldset" name="contacts">
+          <fieldset class="feedback-form__item feedback-form__item--2" name="contacts">
             <legend class="feedback-form__legend">контактная информация:</legend>
 
             <label class="feedback-form__label" for="phone">контактный телефон*:</label>
@@ -98,7 +95,7 @@
 
           </fieldset>
 
-          <fieldset class="feedback-form__fieldset" name="impression">
+          <fieldset class="feedback-form__item feedback-form__item--3" name="impression">
             <legend class="feedback-form__legend">ваше общее впечатление:</legend>
 
             <input type="radio" name="impression" id="positive" checked>
@@ -111,7 +108,7 @@
             <label for="no-exact">затрудняюсь ответить</label>
           </fieldset>
 
-          <fieldset class="feedback-form__fieldset" name="attractions">
+          <fieldset class="feedback-form__item feedback-form__item--4" name="attractions">
             <legend class="feedback-form__legend">посещенные<br>достопримечательности:</legend>
 
             <input type="checkbox" name="attraction" id="diablo-bridge" checked>
@@ -127,10 +124,16 @@
             <label for="red-rocks">Красные скалы</label>
           </fieldset>
 
-          <h3>Опишите свои эмоции:</h3>
-          <textarea class="feedback-form__text" rows="3">Опишите подробно все свои восторги </textarea>
+          <div class="feedback-form__item feedback-form__item--5">
+            <h3>Опишите свои эмоции:</h3>
+            <textarea class="feedback-form__text" rows="3">Опишите подробно все свои восторги </textarea>
+          </div>
 
-          <button class="feedback-form__button" type="submit">отправить отзыв</button>
+          <div class="feedback-form__item feedback-form__item--6">
+            <button class="feedback-form__button" type="submit">отправить отзыв</button>
+            <span class="feedback-form__bottom-text">* — обязательные поля</span>
+          </div>
+
         </form>
       </section>
 
@@ -179,17 +182,18 @@
       </div>
     </footer>
 
-    <section class="modal modal--failture">
+    <section class="visually-hidden modal modal--failture">
       <h2>ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
       <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
       <button class="modal__button modal__button--failture" type="button">OK</button>
     </section>
 
-    <section class="modal modal--success">
+    <section class="visually-hidden modal modal--success">
       <h2>Ваш отзыв отправлен!</h2>
       <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
       <button class="modal__button modal__button--success" type="button">ЗАкРЫТЬ ОКНО</button>
     </section>
 
   </body>
+
 </html>
