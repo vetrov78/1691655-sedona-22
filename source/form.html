@@ -71,55 +71,55 @@
 
         <form method="POST" class="feedback-form" action="https://echo.htmlacademy.ru">
 
-          <fieldset class="feedback-form__item feedback-form__item--1" name="name">
+          <fieldset class="feedback-form__item feedback-form__item--name" name="name">
             <legend class="feedback-form__legend">представьтесь:</legend>
 
             <label class="feedback-form__label" for="name">имя*:
-              <input class="feedback-form__input" type="text" name="name" id="name" placeholder="Петр" required>
+              <input class="feedback-form__input" size="9" type="text" name="name" id="name" placeholder="Петр" required>
             </label>
 
             <label class="feedback-form__label" for="surname">фамилия*:
-              <input class="feedback-form__input" type="text" name="surname" id="surname" placeholder="Иванов" required>
+              <input class="feedback-form__input" size="9" type="text" name="surname" id="surname" placeholder="Иванов" required>
             </label>
 
             <label class="feedback-form__label" for="middlename">отчество:
-              <input class="feedback-form__input" type="text" name="middlename" id="middlename" placeholder="Александрович">
+              <input class="feedback-form__input" size="9" type="text" name="middlename" id="middlename" placeholder="Александрович">
             </label>
           </fieldset>
 
-          <fieldset class="feedback-form__item feedback-form__item--2" name="contacts">
+          <fieldset class="feedback-form__item feedback-form__item--contacts" name="contacts">
             <legend class="feedback-form__legend">контактная информация:</legend>
 
             <label class="feedback-form__label" for="phone">контактный телефон*:
-              <input class="feedback-form__input" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" id="phone" placeholder="Введите телефон" required>
+              <input class="feedback-form__input" size="10" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" id="phone" placeholder="Введите телефон" required>
             </label>
 
             <label class="feedback-form__label" for="mail">электронная почта*:
-              <input class="feedback-form__input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="mail" id="mail" placeholder="Введите e-mail" required>
+              <input class="feedback-form__input" size="10" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="mail" id="mail" placeholder="Введите e-mail" required>
             </label>
 
           </fieldset>
 
-          <fieldset class="feedback-form__item feedback-form__item--3" name="impression">
+          <fieldset class="feedback-form__item feedback-form__item--impression" name="impression">
             <legend class="feedback-form__legend">ваше общее впечатление:</legend>
 
-            <label class="feedback-form__label" for="positive">
+            <label class="feedback-form__label regular-text-style" for="positive">
               <input type="radio" name="impression" id="positive" checked>
               скорее положительное
             </label>
 
-            <label for="negative">
+            <label class="feedback-form__label regular-text-style" for="negative">
               <input type="radio" name="impression" id="negative">
               скорее отрицательное
             </label>
 
-            <label for="no-exact">
+            <label class="feedback-form__label regular-text-style" for="no-exact">
               <input type="radio" name="impression" id="no-exact">
-              затрудняюсь ответить
+              Затрудняюсь ответить
             </label>
           </fieldset>
 
-          <fieldset class="feedback-form__item feedback-form__item--4" name="attractions">
+          <fieldset class="feedback-form__item feedback-form__item--attraction" name="attractions">
             <legend class="feedback-form__legend">посещенные<br>достопримечательности:</legend>
 
             <label for="diablo-bridge">
