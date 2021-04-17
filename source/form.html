@@ -77,54 +77,73 @@
           <fieldset class="feedback-form__fieldset" name="name">
             <legend class="feedback-form__legend">представьтесь:</legend>
 
-            <label class="feedback-form__label" for="name">имя*:</label>
-            <input class="feedback-form__input" type="text" name="name" id="name" value="Петр" required>
+            <label class="feedback-form__label" for="name">имя*:
+              <input class="feedback-form__input" type="text" name="name" id="name" placeholder="Петр" required>
+            </label>
 
-            <label class="feedback-form__label" for="surname">фамилия*:</label>
-            <input class="feedback-form__input" type="text" name="surname" id="surname" value="Иванов" required>
+            <label class="feedback-form__label" for="surname">фамилия*:
+              <input class="feedback-form__input" type="text" name="surname" id="surname" placeholder="Иванов" required>
+            </label>
 
-            <label class="feedback-form__label" for="middlename">отчество:</label>
-            <input class="feedback-form__input" type="text" name="middlename" id="middlename" value="Александрович">
+            <label class="feedback-form__label" for="middlename">отчество:
+              <input class="feedback-form__input" type="text" name="middlename" id="middlename" placeholder="Александрович">
+            </label>
           </fieldset>
 
           <fieldset class="feedback-form__fieldset" name="contacts">
             <legend class="feedback-form__legend">контактная информация:</legend>
 
-            <label class="feedback-form__label" for="phone">контактный телефон*:</label>
-            <input class="feedback-form__input" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" id="phone" placeholder="Введите телефон" required>
+            <label class="feedback-form__label" for="phone">контактный телефон*:
+              <input class="feedback-form__input" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" id="phone" placeholder="Введите телефон" required>
+            </label>
 
-            <label class="feedback-form__label" for="mail">электронная почта*:</label>
-            <input class="feedback-form__input" type="email" pattern=pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="mail" id="mail" placeholder="Введите e-mail" required>
+            <label class="feedback-form__label" for="mail">электронная почта*:
+              <input class="feedback-form__input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="mail" id="mail" placeholder="Введите e-mail" required>
+            </label>
 
           </fieldset>
 
           <fieldset class="feedback-form__fieldset" name="impression">
             <legend class="feedback-form__legend">ваше общее впечатление:</legend>
 
-            <input type="radio" name="impression" id="positive" checked>
-            <label class="feedback-form__label" for="positive">скорее положительное</label>
+            <label class="feedback-form__label" for="positive">
+              <input type="radio" name="impression" id="positive" checked>
+              скорее положительное
+            </label>
 
-            <input type="radio" name="impression" id="negative">
-            <label for="negative">скорее отрицательное</label>
+            <label for="negative">
+              <input type="radio" name="impression" id="negative">
+              скорее отрицательное
+            </label>
 
-            <input type="radio" name="impression" id="no-exact">
-            <label for="no-exact">затрудняюсь ответить</label>
+            <label for="no-exact">
+              <input type="radio" name="impression" id="no-exact">
+              затрудняюсь ответить
+            </label>
           </fieldset>
 
           <fieldset class="feedback-form__fieldset" name="attractions">
             <legend class="feedback-form__legend">посещенные<br>достопримечательности:</legend>
 
-            <input type="checkbox" name="attraction" id="diablo-bridge" checked>
-            <label for="diablo-bridge">мост Дьявола</label>
+            <label for="diablo-bridge">
+              <input type="checkbox" name="attraction" id="diablo-bridge" checked>
+              мост Дьявола
+            </label>
 
-            <input type="checkbox" name="attraction" id="bell-mountain" checked>
-            <label for="bell-mountain">Гора-Колокол</label>
+            <label for="bell-mountain">
+              <input type="checkbox" name="attraction" id="bell-mountain" checked>
+              Гора-Колокол
+            </label>
 
-            <input type="checkbox" name="attraction" id="slide-park" checked>
-            <label for="slide-park">слайд-парк</label>
+            <label for="slide-park">
+              <input type="checkbox" name="attraction" id="slide-park" checked>
+              слайд-парк
+            </label>
 
-            <input type="checkbox" name="attraction" id="red-rocks">
-            <label for="red-rocks">Красные скалы</label>
+            <label for="red-rocks">
+              <input type="checkbox" name="attraction" id="red-rocks">
+              Красные скалы
+            </label>
           </fieldset>
 
           <h3>Опишите свои эмоции:</h3>
