@@ -1,15 +1,18 @@
 .page {
   height: 100%;
+
+  font-size: 18px;
+  font-family: "PT Sans", sans-serif;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .page__body {
   min-height: 100%;
-  margin: 10px;
 
-  font-size: 18px;
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-weight: 400;
-  line-height: 26px;
-  text-transform: uppercase;
-  text-align: center;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+
+  margin: 10px;
 }
