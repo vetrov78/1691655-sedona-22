@@ -1,9 +1,68 @@
-.feedback-form__fieldset {
-  border: none;
+.feedback-form {
+  //background-color: olivedrab;
+  //padding: 10px;
 
   display: grid;
+  grid-gap: 20px;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(2, 350px);
+  }
 }
 
+.feedback-form__item {
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  border: none;
+
+  //background-color: papayawhip;
+  min-width: 320px;
+  max-width: 720px;
+
+  order: 4;
+}
+
+.feedback-form__label {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  column-gap: 15px;
+
+  margin-bottom: 5px;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback-form__item--1 {
+    order: 2;
+  }
+
+  .feedback-form__item--2 {
+    order: 3;
+    grid-column: 1;
+    grid-column-end: 3;
+  }
+
+  .feedback-form__item--3 {
+    order: 1;
+  }
+
+  .feedback-form__item--4 {
+    grid-column: 1;
+    grid-column-end: 3;
+  }
+
+  .feedback-form__item--5 {
+    grid-column: 1;
+    grid-column-end: 3;
+  }
+
+  .feedback-form__item--6 {
+    grid-column: 1;
+    grid-column-end: 3;
+  }
+}
 
 .feedback-form__legend {
   font-weight: 700;
@@ -44,8 +103,14 @@
 
 .feedback-form__text {
   background-color: @grey;
-
   font-size: 18px;
   font-weight: 700;
   font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.feedback-form__bottom-text {
+  display: none;
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+  }
 }
