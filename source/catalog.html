@@ -1,45 +1,52 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона. Форма отзыва</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>HTML Academy: Седона</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
+
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
-  <body>
+  <body class="page__body">
 
     <header class="page-header">
-      <a class="page-header__logo"></a>
-
+      <a href="index.html" class="page-header__logo">
         <img src="img/logo.svg" width="101" height="84" alt="Логотип сайта">
+      </a>
+
+      <nav class="main-navigation">
 
         <button class="main-navigation__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+          <span>Бургер</span>
         </button>
 
-        <nav class="main-navigation">
-          <ul class="main-navigation__list">
-            <li class="main-navigation__item">
-              <a href="index.html">
-                Главная
-              </a>
+        <ul class="main-navigation__list">
+          <li class="main-navigation__item main-navigation__item--current">
+            <a href="index.html">
+              Главная
+            </a>
+          </li>
+          <li class="main-navigation__item">
+            <a>
+              Фото и видео
+            </a>
+          </li>
+          <li class="main-navigation__item">
+            <a href="form.html">
+              Форма Отзыва
+            </a>
+          </li>
+          <li class="main-navigation__item">
+            <a href="https://htmlacademy.ru/" target="_blank">
+              HTML ACADEMY
+            </a>
             </li>
-            <li class="main-navigation__item main-navigation__item--current">
-              <a>
-                Фото и видео
-              </a>
-            </li>
-            <li class="main-navigation__item">
-              <a href="form.html">
-                Форма Отзыва
-              </a>
-            </li>
-            <li class="main-navigation__item">
-              <a href="https://htmlacademy.ru/" target="_blank">
-                HTML ACADEMY
-              </a>
-              </li>
-          </ul>
-        </nav>
+        </ul>
+      </nav>
 
     </header>
 
