@@ -1,13 +1,10 @@
 .feedback-form {
-  //background-color: olivedrab;
-  //padding: 10px;
-
   display: grid;
   grid-gap: 20px;
   justify-content: center;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: repeat(2, 350px);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -19,14 +16,32 @@
 
   background-color: rgb(143, 208, 245);
   min-width: 320px;
-  max-width: 720px;
+  max-width: 1200px;
 
   order: 4;
 
   display: grid;
 }
 
+.feedback-form__item--contacts {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    order: 3;
+    grid-column: 1;
+    grid-column-end: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-basis: 100%;
+  }
+}
+
 .feedback-form__label {
+  outline: 1px dashed black;
+
   display: grid;
   grid-template-columns: min-content 1fr;
 
@@ -34,25 +49,20 @@
   column-gap: 15px;
 
   text-align: start;
+  white-space: nowrap;
   margin-bottom: 5px;
 }
 
 @media (min-width: @tablet-width) {
-  .feedback-form__item--1 {
+  .feedback-form__item--name {
     order: 2;
   }
 
-  .feedback-form__item--2 {
-    order: 3;
-    grid-column: 1;
-    grid-column-end: 3;
-  }
-
-  .feedback-form__item--3 {
+  .feedback-form__item--impression {
     order: 1;
   }
 
-  .feedback-form__item--4 {
+  .feedback-form__item--attraction {
     grid-column: 1;
     grid-column-end: 3;
   }

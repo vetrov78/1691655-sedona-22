@@ -1,6 +1,4 @@
 .page-footer {
-  background-color: bisque;
-
   text-align: center;
 
   display: flex;
@@ -8,6 +6,16 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 45px;
+    padding-right: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 104px;
+    padding-right: 120px;
   }
 }
 
