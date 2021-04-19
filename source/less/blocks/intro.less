@@ -1,10 +1,33 @@
 .intro__image {
   background-color: @blue;
+  position: relative;
+  min-width: 320px;
+  height: 389px;
+  overflow: hidden;
 }
 
 .intro__image-text {
   position: absolute;
-  transform: translateX(50%) translateY(50%);
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+}
+
+.intro__image-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  object-fit: none;
+  display: block;
+
+
+  @media (min-width: @desktop-width) {
+    width: inherit;
+    object-fit: fill;
+  }
 }
 
 .intro__text {
