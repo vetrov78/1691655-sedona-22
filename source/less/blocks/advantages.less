@@ -8,9 +8,12 @@
 }
 
 .advantages__item {
-  outline: 1px dashed black;
+  //outline: 1px dashed black;
   background-color: @light-grey;
   min-width: 320px;
+
+  padding: 12px 12px;
+  box-sizing: border-box;
 }
 
 .advantages__item-with-image {
@@ -20,6 +23,9 @@
 
 .advantages__image {
   background-color: @blue;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
 
   @media (min-width: @tablet-width) {
     height: 256px;
