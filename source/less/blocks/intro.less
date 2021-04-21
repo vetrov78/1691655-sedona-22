@@ -1,10 +1,31 @@
 .intro__image {
   background-color: @blue;
+  position: relative;
+  min-width: 320px;
 }
 
 .intro__image-text {
   position: absolute;
-  transform: translateX(50%) translateY(50%);
+  left: 50%;
+  top: 90px;
+  transform: translateX(-50%);
+
+  @media (min-width: @tablet-width) {
+    top: 77px;
+    width: 461px;
+    height: 350px;
+  }
+}
+
+.intro__image-background {
+  width: 100%;
+  height: 389px;
+  object-fit: cover;
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    height: 518px;
+  }
 }
 
 .intro__text {
