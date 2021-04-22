@@ -122,21 +122,42 @@
 }
 
 //отсуствие js
-.main-navigation-nojs .main-navigation__toggle {
+.main-navigation--nojs .main-navigation__toggle {
   display: none;
 }
 
+//позиция кнопки открытия-закрытия
 .main-navigation__toggle {
   cursor: pointer;
   position: absolute;
   left: 87%;
   top: 17px;
+
+  outline: 3px dashed aquamarine;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
+//выбор какую иконку показывать
+.main-navigation--opened .main-navigation__open-icon {
+  display: none;
+}
+
+.main-navigation--closed .main-navigation__close-icon {
+  display: none;
+}
+
+//заливка иконок открытия-закрытия
 .main-navigation__open-icon {
-  fill: antiquewhite;
+  fill: @light-blue;
+
+  &:active {
+    fill: black;
+  }
 }
 
 .main-navigation__close-icon {
-  fill: antiquewhite;
+  fill: @basic-white;
 }
