@@ -92,7 +92,7 @@
 
         <img class="advantages__image" src="img/photo-city.jpg" width="520" height="260" alt="Фотография городка">
 
-        <div class="advantages__item advantages__item-icon--house">
+        <div class="advantages__item advantages__item-with-icon--house">
           <div class="advantages__icon--house"></div>
           <div class="advantages__item-icon-text-wrapper">
             <h3 class="advantages__item-title">Жилье</h3>
@@ -100,7 +100,7 @@
           </div>
         </div>
 
-        <div class="advantages__item advantages__item-icon--gift">
+        <div class="advantages__item advantages__item-with-icon--gift">
           <div class="advantages__icon--gift"></div>
           <div class="advantages__item-icon-text-wrapper">
             <h3 class="advantages__item-title">СУВЕНИРЫ</h3>
@@ -108,7 +108,7 @@
           </div>
         </div>
 
-        <div class="advantages__item advantages__item-icon--burger">
+        <div class="advantages__item advantages__item-with-icon--burger">
           <div class="advantages__icon--burger"></div>
           <div class="advantages__item-icon-text-wrapper">
             <h3 class="advantages__item-title">ЕДА</h3>
@@ -205,19 +205,19 @@
 
     <script>
       var navMain = document.querySelector(".main-navigation")
-      var navToggle = document.querySelector("main-navigation__toggle");
+      var navToggle = document.querySelector(".main-navigation__toggle");
 
       navMain.classList.remove("main-navigation--nojs");
       navMain.classList.remove("main-navigation--opened");
       navMain.classList.add("main-navigation--closed");
 
       navToggle.addEventListener('click', function() {
-        if (navMain.contains("main-navigation--opened")) {
-          navMain.classList.remove("main-navigation--opened");
-          navMain.classList.add("main-navigation--closed");
-        } else {
+        if (navMain.classList.contains("main-navigation--closed")) {
           navMain.classList.add("main-navigation--opened");
           navMain.classList.remove("main-navigation--closed");
+        } else {
+          navMain.classList.remove("main-navigation--opened");
+          navMain.classList.add("main-navigation--closed");
         }
       });
     </script>
