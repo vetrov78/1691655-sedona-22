@@ -95,7 +95,15 @@
   }
 }
 
-.advantages__item-text-wrapper {
+//меняю местами бургер и подарок
+@media (min-width: @tablet-width) {
+  .advantages__item.advantages__item-icon--gift {
+    grid-column: 3 / 4;
+  }
+
+}
+
+.advantages__item-icon-text-wrapper {
   text-align: left;
   padding-left: 9px;
 

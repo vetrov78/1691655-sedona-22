@@ -15,17 +15,24 @@
 
     <header class="page-header">
 
-      <nav class="main-navigation main-navigation--closed main-navigation-nojs">
-        <button class="main-navigation__toggle" type="button">
+      <nav class="main-navigation main-navigation--closed">
+        <div class="main-navigation__toggle">
           <span class="visually-hidden">Открыть меню</span>
-        </button>
+
+          <svg class="main-navigation__open-icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.9 0H0V4H22.9V0Z"/>
+            <path d="M22.9 9H0V13H22.9V9Z"/>
+            <path d="M22.9 18H0V22H22.9V18Z"/>
+          </svg>
+
+          <svg class="main-navigation__close-icon" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z"/>
+          </svg>
+
+        </div>
 
         <ul class="main-navigation__list">
-          <li class="main-navigation__item--logo">
-            <a class="main-navigation__logo-link">
-              <img src="img/logo.svg" width="101" height="84" alt="Логотип сайта">
-            </a>
-          </li>
+
           <li class="main-navigation__item main-navigation__item--1 main-navigation__item--current">
             <a class="main-navigation__item-link">
               Главная
@@ -46,6 +53,12 @@
               HTML ACADEMY
             </a>
           </li >
+          <li class="main-navigation__item--logo">
+            <a class="main-navigation__logo-link">
+              <img src="img/logo.svg" width="101" height="84" alt="Логотип сайта">
+            </a>
+          </li>
+
         </ul>
       </nav>
 
@@ -82,7 +95,7 @@
 
         <div class="advantages__item advantages__item-icon--house">
           <div class="advantages__icon--house"></div>
-          <div class="advantages__item-text-wrapper">
+          <div class="advantages__item-icon-text-wrapper">
             <h3 class="advantages__item-title">Жилье</h3>
             <p class="advantages__item-description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </div>
@@ -90,7 +103,7 @@
 
         <div class="advantages__item advantages__item-icon--gift">
           <div class="advantages__icon--gift"></div>
-          <div class="advantages__item-text-wrapper">
+          <div class="advantages__item-icon-text-wrapper">
             <h3 class="advantages__item-title">СУВЕНИРЫ</h3>
             <p class="advantages__item-description">Не только китайского, но и местного производства!</p>
           </div>
@@ -98,7 +111,7 @@
 
         <div class="advantages__item advantages__item-icon--burger">
           <div class="advantages__icon--burger"></div>
-          <div class="advantages__item-text-wrapper">
+          <div class="advantages__item-icon-text-wrapper">
             <h3 class="advantages__item-title">ЕДА</h3>
             <p class="advantages__item-description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
           </div>
