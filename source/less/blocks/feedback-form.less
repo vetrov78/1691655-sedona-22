@@ -1,31 +1,59 @@
 .feedback-form {
   display: grid;
-  grid-gap: 20px;
-  justify-content: center;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+//общая стилизация блоков формы отзыва
 .feedback-form__item {
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
   border: none;
 
-  background-color: rgb(143, 208, 245);
   min-width: 320px;
   max-width: 1200px;
 
   order: 4;
 
-  display: grid;
-}
-
-.feedback-form__item--contacts {
   display: flex;
   flex-direction: column;
+}
+
+//стилизация названия блока
+.feedback-form__legend {
+  margin: 0 auto;
+}
+
+//стилизация блока ФИО
+.feedback-form__item--name {
+  & .feedback-form__legend {
+    @media (min-width: @tablet-width) {
+      margin: 0;
+      text-align: left;
+      font-size: 21px;
+    }
+  }
+
+  & .feedback-form__label {
+    font-size: 14px;
+  }
+}
+
+.feedback-form__item--contacts .feedback-form__label {
+  padding-left: 22px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.feedback-form__item--contacts .feedback-form__input {
+  margin-bottom: 25px;
+}
+
+// блок контактной информации
+.feedback-form__item--contacts {
 
   @media (min-width: @tablet-width) {
     order: 3;
@@ -39,6 +67,7 @@
   }
 }
 
+//блок
 .feedback-form__label {
   outline: 1px dashed black;
 
@@ -50,7 +79,7 @@
 
   text-align: start;
   white-space: nowrap;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: @tablet-width) {
