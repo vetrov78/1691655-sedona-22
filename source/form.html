@@ -83,8 +83,8 @@
         <hr>
       </section>
 
-      <section class="feedback-form-wrapper">
-        <h2 class="vissually-hidden">форма отзыва</h2>
+      <section>
+        <h2 class="visually-hidden">форма отзыва</h2>
 
         <form method="POST" class="feedback-form" action="https://echo.htmlacademy.ru">
 
@@ -105,7 +105,6 @@
           </fieldset>
 
           <fieldset class="feedback-form__item feedback-form__item--contacts" name="contacts">
-            <legend class="feedback-form__legend">контактная информация:</legend>
 
             <label class="feedback-form__label" for="phone">контактный телефон*:
               <input class="feedback-form__input" size="10" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" id="phone" placeholder="Введите телефон" required>
@@ -115,6 +114,7 @@
               <input class="feedback-form__input" size="10" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="mail" id="mail" placeholder="Введите e-mail" required>
             </label>
 
+            <legend class="feedback-form__legend">контактная информация:</legend>
           </fieldset>
 
           <fieldset class="feedback-form__item feedback-form__item--impression" name="impression">
