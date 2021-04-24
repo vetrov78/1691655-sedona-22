@@ -1,34 +1,105 @@
-.intro__image {
+//блок интро на главной странице
+.intro__image-index-page {
   background-color: @blue;
   position: relative;
   min-width: 320px;
-}
-
-.intro__image-text {
-  position: absolute;
-  left: 50%;
-  top: 90px;
-  transform: translateX(-50%);
-
-  @media (min-width: @tablet-width) {
-    top: 77px;
-    width: 461px;
-    height: 350px;
-  }
-}
-
-.intro__image-background {
-  width: 100%;
   height: 389px;
-  object-fit: cover;
-  display: block;
 
   @media (min-width: @tablet-width) {
     height: 518px;
   }
 }
 
+.intro__image-index-page-text {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 90px;
+
+  @media (min-width: @tablet-width) {
+    width: 457px;
+    height: 350px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 460px;
+  }
+}
+
+.intro__image-background-index-page {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  transform: translateX(-50%);
+  object-fit: cover;
+}
+
+//блок интро на остальных страницах (изменен текст и размер контейнера)
+.intro__image-other-page {
+  background-color: @blue;
+  position: relative;
+  min-width: 320px;
+  height: 158px;
+
+  @media (min-width: @tablet-width) {
+    height: 290px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+}
+
+.intro__image-background-other-page {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  transform: translateX(-50%);
+  object-fit: none;
+  object-position: center bottom;
+}
+
+.intro__image-other-page-text {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 51px;
+
+  @media (min-width: @tablet-width) {
+    width: 457px;
+    height: 78px;
+    top: 95px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 460px;
+  }
+}
+
+.intro__bottom-triangle {
+  position: absolute;
+  transform: translateX(-50%);
+  height: 57px;
+  bottom: -1px;
+  object-fit: cover;
+}
+
 .intro__text {
-  padding-left: 12px;
-  padding-right: 9px;
+  min-width: 285px;
+  max-width: 483px;
+  margin: auto;
+
+  @media (min-width: @tablet-width) {
+    text-shadow: none;
+  }
+}
+
+.intro__text-title {
+  font-size: 18px;
+}
+
+.intro__text-description {
+  font-size: 14px;
 }

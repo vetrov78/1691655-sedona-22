@@ -15,17 +15,23 @@
 
     <header class="page-header">
 
-      <nav class="main-navigation">
-        <button class="main-navigation__toggle" type="button">
+      <nav class="main-navigation main-navigation--opened main-navigation--nojs">
+        <div class="main-navigation__toggle">
           <span class="visually-hidden">Открыть меню</span>
-        </button>
+
+          <svg class="main-navigation__open-icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.9 0H0V4H22.9V0Z"/>
+            <path d="M22.9 9H0V13H22.9V9Z"/>
+            <path d="M22.9 18H0V22H22.9V18Z"/>
+          </svg>
+          <svg class="main-navigation__close-icon" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z"/>
+          </svg>
+
+        </div>
 
         <ul class="main-navigation__list">
-          <li class="main-navigation__item--logo">
-            <a class="page-header__logo">
-              <img src="img/logo.svg" width="101" height="84" alt="Логотип сайта">
-            </a>
-          </li>
+
           <li class="main-navigation__item main-navigation__item--1 main-navigation__item--current">
             <a class="main-navigation__item-link">
               Главная
@@ -46,6 +52,12 @@
               HTML ACADEMY
             </a>
           </li >
+          <li class="main-navigation__item--logo">
+            <a class="main-navigation__logo-link">
+              <img src="img/logo.svg" width="101" height="84" alt="Логотип сайта">
+            </a>
+          </li>
+
         </ul>
       </nav>
 
@@ -58,9 +70,10 @@
       <section class="intro">
         <h2 class="visually-hidden">Приветствие от Седоны</h2>
 
-        <div class="intro__image">
-          <img class="intro__image-text" src="img/index-intro-image-text.svg" width="282" height="214" alt="Приветственная надпись">
-          <img class="intro__image-background" src="img/background.jpg" width="1200" height="518" alt="Приветственный рисунок">
+        <div class="intro__image-index-page">
+          <img class="intro__image-index-page-text" src="img/index-intro-image-text.svg" width="282" height="214" alt="Приветственная надпись">
+          <img class="intro__image-background-index-page" src="img/background.jpg" width="1200" height="518" alt="Приветственный рисунок">
+          <img class="intro__bottom-triangle" src="img/intro-triangle.svg" width="1200" height="57" alt="Декоративная нижняя граница интро"></img>
         </div>
 
         <div class="intro__text">
@@ -80,25 +93,25 @@
 
         <img class="advantages__image" src="img/photo-city.jpg" width="520" height="260" alt="Фотография городка">
 
-        <div class="advantages__item advantages__item-icon--house">
+        <div class="advantages__item advantages__item-with-icon--house">
           <div class="advantages__icon--house"></div>
-          <div class="advantages__item-text-wrapper">
+          <div class="advantages__item-icon-text-wrapper">
             <h3 class="advantages__item-title">Жилье</h3>
             <p class="advantages__item-description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </div>
         </div>
 
-        <div class="advantages__item advantages__item-icon--gift">
+        <div class="advantages__item advantages__item-with-icon--gift">
           <div class="advantages__icon--gift"></div>
-          <div class="advantages__item-text-wrapper">
+          <div class="advantages__item-icon-text-wrapper">
             <h3 class="advantages__item-title">СУВЕНИРЫ</h3>
             <p class="advantages__item-description">Не только китайского, но и местного производства!</p>
           </div>
         </div>
 
-        <div class="advantages__item advantages__item-icon--burger">
+        <div class="advantages__item advantages__item-with-icon--burger">
           <div class="advantages__icon--burger"></div>
-          <div class="advantages__item-text-wrapper">
+          <div class="advantages__item-icon-text-wrapper">
             <h3 class="advantages__item-title">ЕДА</h3>
             <p class="advantages__item-description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
           </div>
@@ -191,5 +204,23 @@
       <form action="get" class="search-form" action="https://echo.htmlacademy.ru"></form>
     </section>
 
+    <script>
+      var navMain = document.querySelector(".main-navigation")
+      var navToggle = document.querySelector(".main-navigation__toggle");
+
+      navMain.classList.remove("main-navigation--nojs");
+      navMain.classList.remove("main-navigation--opened");
+      navMain.classList.add("main-navigation--closed");
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains("main-navigation--closed")) {
+          navMain.classList.add("main-navigation--opened");
+          navMain.classList.remove("main-navigation--closed");
+        } else {
+          navMain.classList.remove("main-navigation--opened");
+          navMain.classList.add("main-navigation--closed");
+        }
+      });
+    </script>
   </body>
 </html>

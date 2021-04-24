@@ -14,18 +14,26 @@
   <body class="page__body">
 
     <header class="page-header">
-      <a href="index.html" class="page-header__logo">
-        <img src="img/logo.svg" width="101" height="84" alt="Логотип сайта">
-      </a>
 
-      <nav class="main-navigation">
-        <button class="main-navigation__toggle" type="button">
+      <nav class="main-navigation main-navigation--closed main-navigation--nojs">
+        <div class="main-navigation__toggle">
           <span class="visually-hidden">Открыть меню</span>
-        </button>
+
+          <svg class="main-navigation__open-icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.9 0H0V4H22.9V0Z"/>
+            <path d="M22.9 9H0V13H22.9V9Z"/>
+            <path d="M22.9 18H0V22H22.9V18Z"/>
+          </svg>
+          <svg class="main-navigation__close-icon" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z"/>
+          </svg>
+
+        </div>
 
         <ul class="main-navigation__list">
-          <li class="main-navigation__item main-navigation__item--1">
-            <a class="main-navigation__item-link"  href="index.html">
+
+          <li class="main-navigation__item main-navigation__item--1 ">
+            <a class="main-navigation__item-link" href="index.html">
               Главная
             </a>
           </li>
@@ -34,7 +42,7 @@
               Фото и видео
             </a>
           </li>
-          <li class="main-navigation__item main-navigation__item--3  main-navigation__item--current">
+          <li class="main-navigation__item main-navigation__item--3 main-navigation__item--current">
             <a class="main-navigation__item-link">
               Форма Отзыва
             </a>
@@ -43,7 +51,13 @@
             <a class="main-navigation__item-link" href="https://htmlacademy.ru/" target="_blank">
               HTML ACADEMY
             </a>
-            </li>
+          </li >
+          <li class="main-navigation__item--logo">
+            <a class="main-navigation__logo-link" href="index.html">
+              <img src="img/logo.svg" width="101" height="84" alt="Логотип сайта">
+            </a>
+          </li>
+
         </ul>
       </nav>
 
@@ -56,20 +70,21 @@
       <section class="intro">
         <h2 class="visually-hidden">Предложение оставить отзыв</h2>
 
-        <div class="intro__image">
-          <img class="intro__image-text" src="img/form-intro-image-text.svg" width="229" height="39" alt="Приветственная надпись">
-          <img class="intro__image-background" src="img/background.jpg" width="1200" height="518" alt="Приветственный рисунок">
+        <div class="intro__image-other-page">
+          <img class="intro__image-other-page-text" src="img/form-intro-image-text.svg" width="229" height="39" alt="Приветственная надпись">
+          <img class="intro__image-background-other-page" src="img/background.jpg" width="1200" height="518" alt="Приветственный рисунок">
+          <img class="intro__bottom-triangle" src="img/intro-triangle.svg" width="1200" height="57" alt="Декоративная нижняя граница интро"></img>
         </div>
 
-        <div class="intro-text">
-          <h3 class="intro-text__title">Оставьте свой отзыв</h3>
-          <p class="intro-text__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        <div class="intro__text">
+          <h3 class="intro__text-title">Оставьте свой отзыв</h3>
+          <p class="intro__text-description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
         <hr>
       </section>
 
-      <section class="feedback-form-wrapper">
-        <h2 class="vissually-hidden">форма отзыва</h2>
+      <section>
+        <h2 class="visually-hidden">форма отзыва</h2>
 
         <form method="POST" class="feedback-form" action="https://echo.htmlacademy.ru">
 
@@ -121,33 +136,34 @@
             </label>
           </fieldset>
 
-          <fieldset class="feedback-form__item feedback-form__item--attraction" name="attractions">
+          <fieldset class="feedback-form__item feedback-form__item--visited-attraction" name="visited-attractions">
             <legend class="feedback-form__legend">посещенные<br>достопримечательности:</legend>
 
-            <label for="diablo-bridge">
-              <input type="checkbox" name="attraction" id="diablo-bridge" checked>
+            <label class="feedback-form__label" for="diablo-bridge">
+              <input type="checkbox" name="visited-attraction" id="diablo-bridge" checked>
               мост Дьявола
             </label>
 
-            <label for="bell-mountain">
-              <input type="checkbox" name="attraction" id="bell-mountain" checked>
+            <label class="feedback-form__label" for="bell-mountain">
+              <input type="checkbox" name="visited-attraction" id="bell-mountain" checked>
               Гора-Колокол
             </label>
 
-            <label for="slide-park">
-              <input type="checkbox" name="attraction" id="slide-park" checked>
+            <label class="feedback-form__label" for="slide-park">
+              <input type="checkbox" name="visited-attraction" id="slide-park" checked>
               слайд-парк
             </label>
 
-            <label for="red-rocks">
-              <input type="checkbox" name="attraction" id="red-rocks">
+            <label class="feedback-form__label" for="red-rocks">
+              <input type="checkbox" name="visited-attraction" id="red-rocks">
               Красные скалы
             </label>
+
           </fieldset>
 
-          <div class="feedback-form__item feedback-form__item--5">
+          <div class="feedback-form__item feedback-form__item--emotions">
             <h3>Опишите свои эмоции:</h3>
-            <textarea class="feedback-form__text" rows="3">Опишите подробно все свои восторги </textarea>
+            <textarea class="feedback-form__text-emotions" rows="3" placeholder="Опишите подробно все свои восторги"></textarea>
           </div>
 
           <div class="feedback-form__item feedback-form__item--6">
@@ -215,6 +231,24 @@
       <button class="modal__button modal__button--success" type="button">ЗАкРЫТЬ ОКНО</button>
     </section>
 
+    <script>
+      var navMain = document.querySelector(".main-navigation")
+      var navToggle = document.querySelector(".main-navigation__toggle");
+
+      navMain.classList.remove("main-navigation--nojs");
+      navMain.classList.remove("main-navigation--opened");
+      navMain.classList.add("main-navigation--closed");
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains("main-navigation--closed")) {
+          navMain.classList.add("main-navigation--opened");
+          navMain.classList.remove("main-navigation--closed");
+        } else {
+          navMain.classList.remove("main-navigation--opened");
+          navMain.classList.add("main-navigation--closed");
+        }
+      });
+    </script>
   </body>
 
 </html>
