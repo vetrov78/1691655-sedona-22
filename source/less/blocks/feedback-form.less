@@ -27,12 +27,21 @@
 .feedback-form__legend {
   font-weight: 700;
   margin: 0 auto;
+  height: 5px;
+
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+
 }
 
 //общая стилизация названия поля
 .feedback-form__label {
   font-size: 14px;
-  outline: 1px dashed black;
+  margin-top: 5px;
+  //outline: 1px dashed black;
 }
 
 //общая стилизация поля ввода
@@ -55,9 +64,7 @@
 
   & .feedback-form__legend {
     @media (min-width: @tablet-width) {
-      margin: 0;
       text-align: left;
-      font-size: 21px;
     }
   }
 
@@ -77,6 +84,7 @@
 .feedback-form__item--contacts {
 
   display: grid;
+  grid-template-rows: repeat(3, auto);
 
   @media (min-width: @tablet-width) {
     order: 3;
@@ -87,6 +95,13 @@
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(2, 480px);
     column-gap: 79px;
+  }
+
+  & .feedback-form__legend {
+    @media (min-width: @desktop-width) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
   }
 
   & .feedback-form__label {
@@ -113,8 +128,13 @@
   }
 }
 
+//блок позитивное-негативное впечатление
 .feedback-form__item--impression {
   align-items: flex-start;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
 
   & .feedback-form__label {
     font-weight: 700;
@@ -122,42 +142,72 @@
   }
 }
 
-.feedback-form__item--attraction {
+//блок посещенных достопримечательностей
+.feedback-form__item--visited-attraction {
   align-items: flex-start;
 
   @media (min-width: @tablet-width) {
+    grid-column: 1;
+    grid-column-end: 3;
+
     display: grid;
+    grid-template-rows: repeat(3, auto);
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 42px;
     text-align: left;
-
-    //padding: 0 100px;
-  }
-  flex-wrap: wrap;
-}
-
-// добавить в каждый блок отдельно
-@media (min-width: @tablet-width) {
-    .feedback-form__item--impression {
-    order: 1;
   }
 
-  .feedback-form__item--attraction {
-    grid-column: 1;
-    grid-column-end: 3;
+  @media (min-width: @desktop-width) {
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  .feedback-form__item--5 {
-    grid-column: 1;
-    grid-column-end: 3;
-  }
+  & .feedback-form__legend {
+    @media (min-width: @tablet-width) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      height: 35px;
+    }
 
-  .feedback-form__item--6 {
-    grid-column: 1;
-    grid-column-end: 3;
+    @media (min-width: @desktop-width) {
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
   }
 }
 
+.feedback-form__item--emotions {
+  @media (min-width: @tablet-width) {
+    grid-column: 1;
+    grid-column-end: 3;
+  }
+}
+
+.feedback-form__text-emotions {
+  background-color: @light-grey;
+
+  font-family: PT Sans;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+
+  padding: 18px 21px 24px 21px;
+
+  &::placeholder {
+    color: @basic-black;
+  }
+}
+
+
+.feedback-form__item--6 {
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1;
+    grid-column-end: 3;
+
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
 .feedback-form__button {
   cursor: pointer;
@@ -182,15 +232,10 @@
   }
 }
 
-.feedback-form__text {
-  background-color: @grey;
-  font-size: 18px;
-  font-weight: 700;
-  font-family: "PT Sans", "Arial", sans-serif;
-}
-
 .feedback-form__bottom-text {
   display: none;
+
+  color: @light-black;
 
   @media (min-width: @tablet-width) {
     display: inline-block;

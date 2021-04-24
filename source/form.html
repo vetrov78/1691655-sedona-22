@@ -105,6 +105,7 @@
           </fieldset>
 
           <fieldset class="feedback-form__item feedback-form__item--contacts" name="contacts">
+            <legend class="feedback-form__legend">контактная информация:</legend>
 
             <label class="feedback-form__label" for="phone">контактный телефон*:
               <input class="feedback-form__input" size="10" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" id="phone" placeholder="Введите телефон" required>
@@ -114,7 +115,6 @@
               <input class="feedback-form__input" size="10" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="mail" id="mail" placeholder="Введите e-mail" required>
             </label>
 
-            <legend class="feedback-form__legend">контактная информация:</legend>
           </fieldset>
 
           <fieldset class="feedback-form__item feedback-form__item--impression" name="impression">
@@ -136,34 +136,34 @@
             </label>
           </fieldset>
 
-          <fieldset class="feedback-form__item feedback-form__item--attraction" name="attractions">
+          <fieldset class="feedback-form__item feedback-form__item--visited-attraction" name="visited-attractions">
+            <legend class="feedback-form__legend">посещенные<br>достопримечательности:</legend>
 
             <label class="feedback-form__label" for="diablo-bridge">
-              <input type="checkbox" name="attraction" id="diablo-bridge" checked>
+              <input type="checkbox" name="visited-attraction" id="diablo-bridge" checked>
               мост Дьявола
             </label>
 
             <label class="feedback-form__label" for="bell-mountain">
-              <input type="checkbox" name="attraction" id="bell-mountain" checked>
+              <input type="checkbox" name="visited-attraction" id="bell-mountain" checked>
               Гора-Колокол
             </label>
 
             <label class="feedback-form__label" for="slide-park">
-              <input type="checkbox" name="attraction" id="slide-park" checked>
+              <input type="checkbox" name="visited-attraction" id="slide-park" checked>
               слайд-парк
             </label>
 
             <label class="feedback-form__label" for="red-rocks">
-              <input type="checkbox" name="attraction" id="red-rocks">
+              <input type="checkbox" name="visited-attraction" id="red-rocks">
               Красные скалы
             </label>
 
-            <legend class="feedback-form__legend">посещенные<br>достопримечательности:</legend>
           </fieldset>
 
-          <div class="feedback-form__item feedback-form__item--5">
+          <div class="feedback-form__item feedback-form__item--emotions">
             <h3>Опишите свои эмоции:</h3>
-            <textarea class="feedback-form__text" rows="3">Опишите подробно все свои восторги </textarea>
+            <textarea class="feedback-form__text-emotions" rows="3" placeholder="Опишите подробно все свои восторги"></textarea>
           </div>
 
           <div class="feedback-form__item feedback-form__item--6">
