@@ -17,6 +17,10 @@
   max-width: 1200px;
 
   order: 4;
+
+  display: flex;
+  flex-direction: column;
+  //align-items: flex-start;
 }
 
 //общая стилизация названия блока
@@ -42,10 +46,8 @@
   font-size: 18px;
 }
 
-//стилизация блока ФИО
+//блок ФИО
 .feedback-form__item--name {
-  display: flex;
-  flex-direction: column;
 
   @media (min-width: @tablet-width) {
     order: 2;
@@ -71,7 +73,7 @@
   }
 }
 
-// блок контактной информации
+// блок информации о контактах
 .feedback-form__item--contacts {
 
   display: grid;
@@ -112,18 +114,26 @@
 }
 
 .feedback-form__item--impression {
-  display: flex;
-  flex-direction: column;
   align-items: flex-start;
 
   & .feedback-form__label {
     font-weight: 700;
     padding: 11px 0;
   }
+}
 
-  & .feedback-form__input {
+.feedback-form__item--attraction {
+  align-items: flex-start;
 
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 42px;
+    text-align: left;
+
+    //padding: 0 100px;
   }
+  flex-wrap: wrap;
 }
 
 // добавить в каждый блок отдельно
