@@ -19,15 +19,37 @@
   order: 4;
 }
 
-//стилизация названия блока
+//общая стилизация названия блока
 .feedback-form__legend {
+  font-weight: 700;
   margin: 0 auto;
+}
+
+//общая стилизация названия поля
+.feedback-form__label {
+  font-size: 14px;
+  outline: 1px dashed black;
+}
+
+//общая стилизация поля ввода
+.feedback-form__input {
+  border: none;
+  background-color: @light-grey;
+  padding: 18px 10px 14px 22px;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 //стилизация блока ФИО
 .feedback-form__item--name {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
 
   & .feedback-form__legend {
     @media (min-width: @tablet-width) {
@@ -38,12 +60,20 @@
   }
 
   & .feedback-form__label {
-    font-size: 14px;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+
+    align-items: center;
+    column-gap: 15px;
+
+    text-align: start;
+    white-space: nowrap;
   }
 }
 
 // блок контактной информации
 .feedback-form__item--contacts {
+
   display: grid;
 
   @media (min-width: @tablet-width) {
@@ -53,52 +83,52 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 10px;
+    grid-template-columns: repeat(2, 480px);
+    column-gap: 79px;
   }
 
   & .feedback-form__label {
     text-indent: 22px;
-    margin-bottom: 5px;
-    font-size: 14px;
+    text-align: start;
+    white-space: nowrap;
 
     display: flex;
     flex-direction: column;
-    align-items: stretch ;
+    align-items: stretch;
 
     @media (min-width: @desktop-width) {
-      flex-direction: row;
-      align-items: center;
+       flex-direction: row;
+       align-items: center;
     }
   }
 
   & .feedback-form__input {
     margin: 0;
+
+    @media (min-width: @desktop-width) {
+      width: 358px;
+   }
   }
 }
 
-//блок
-.feedback-form__label {
-  outline: 1px dashed black;
+.feedback-form__item--impression {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
-  display: grid;
-  grid-template-columns: min-content 1fr;
+  & .feedback-form__label {
+    font-weight: 700;
+    padding: 11px 0;
+  }
 
-  align-items: center;
-  column-gap: 15px;
+  & .feedback-form__input {
 
-  text-align: start;
-  white-space: nowrap;
-  margin-bottom: 20px;
+  }
 }
 
 // добавить в каждый блок отдельно
 @media (min-width: @tablet-width) {
-  .feedback-form__item--name {
-    order: 2;
-  }
-
-  .feedback-form__item--impression {
+    .feedback-form__item--impression {
     order: 1;
   }
 
@@ -118,19 +148,6 @@
   }
 }
 
-.feedback-form__legend {
-  font-weight: 700;
-}
-
-.feedback-form__input {
-  border: none;
-  background-color: @light-grey;
-  padding: 18px 10px 14px 22px;
-
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-}
 
 .feedback-form__button {
   cursor: pointer;
