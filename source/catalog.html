@@ -14,28 +14,36 @@
   <body class="page__body">
 
     <header class="page-header">
-      <a href="index.html" class="page-header__logo">
-        <img src="img/logo.svg" width="101" height="84" alt="Логотип сайта">
-      </a>
 
-      <nav class="main-navigation">
-        <button class="main-navigation__toggle" type="button">
+      <nav class="main-navigation main-navigation--closed main-navigation--nojs">
+        <div class="main-navigation__toggle">
           <span class="visually-hidden">Открыть меню</span>
-        </button>
+
+          <svg class="main-navigation__open-icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.9 0H0V4H22.9V0Z"/>
+            <path d="M22.9 9H0V13H22.9V9Z"/>
+            <path d="M22.9 18H0V22H22.9V18Z"/>
+          </svg>
+          <svg class="main-navigation__close-icon" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z"/>
+          </svg>
+
+        </div>
 
         <ul class="main-navigation__list">
-          <li class="main-navigation__item main-navigation__item--1">
-            <a class="main-navigation__item-link"  href="index.html">
+
+          <li class="main-navigation__item main-navigation__item--1 ">
+            <a class="main-navigation__item-link" href="index.html">
               Главная
             </a>
           </li>
-          <li class="main-navigation__item main-navigation__item--2">
-            <a class="main-navigation__item-link" href="catalog.html">
+          <li class="main-navigation__item main-navigation__item--2 main-navigation__item--current">
+            <a class="main-navigation__item-link">
               Фото и видео
             </a>
           </li>
-          <li class="main-navigation__item main-navigation__item--3  main-navigation__item--current">
-            <a class="main-navigation__item-link">
+          <li class="main-navigation__item main-navigation__item--3">
+            <a class="main-navigation__item-link" href="form.html">
               Форма Отзыва
             </a>
           </li>
@@ -43,7 +51,15 @@
             <a class="main-navigation__item-link" href="https://htmlacademy.ru/" target="_blank">
               HTML ACADEMY
             </a>
-            </li>
+          </li >
+          <li class="main-navigation__item--logo">
+            <a class="main-navigation__logo-link" href="index.html">
+              <img class="main-navigation__logo--mobile" src="img/logotyle-mobile.svg" width="102" height="84" alt="Логотип сайта для мобильной версии">
+              <img class="main-navigation__logo--tablet" src="img/logotype-tablet.svg" width="102" height="84" alt="Логотип сайта для мобильной версии">
+              <img class="main-navigation__logo--desktop" src="img/logotype-desktop.svg" width="187" height="97" alt="Логотип сайта для мобильной версии">
+            </a>
+          </li>
+
         </ul>
       </nav>
 
@@ -54,10 +70,13 @@
       <h1 class="visually-hidden">Фото и видео Седоны</h1>
 
       <section class="intro">
-        <h2 class="visually-hidden">Предложение насладиться фотографиями Седоны</h2>
+        <h2 class="visually-hidden">Предложение оставить отзыв</h2>
 
-        <img class="intro__image-text" src="img/form-intro-image-text.svg" width="229" height="39" alt="Приветственная надпись">
-        <img class="intro__image" src="img/background.jpg" width="902" height="214" alt="Приветственный рисунок">
+        <div class="intro__image-other-page">
+          <img class="intro__image-other-page-text" src="img/form-intro-image-text.svg" width="229" height="39" alt="Приветственная надпись">
+          <img class="intro__image-background-other-page" src="img/background.jpg" width="1200" height="518" alt="Приветственный рисунок">
+          <img class="intro__bottom-triangle" src="img/intro-triangle.svg" width="1200" height="57" alt="Декоративная нижняя граница интро"></img>
+        </div>
 
         <div class="intro__text">
           <h3 class="intro__text-title">Фото и видео</h3>
@@ -182,5 +201,23 @@
       </div>
     </footer>
 
+    <script>
+      var navMain = document.querySelector(".main-navigation")
+      var navToggle = document.querySelector(".main-navigation__toggle");
+
+      navMain.classList.remove("main-navigation--nojs");
+      navMain.classList.remove("main-navigation--opened");
+      navMain.classList.add("main-navigation--closed");
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains("main-navigation--closed")) {
+          navMain.classList.add("main-navigation--opened");
+          navMain.classList.remove("main-navigation--closed");
+        } else {
+          navMain.classList.remove("main-navigation--opened");
+          navMain.classList.add("main-navigation--closed");
+        }
+      });
+    </script>
   </body>
 </html>
