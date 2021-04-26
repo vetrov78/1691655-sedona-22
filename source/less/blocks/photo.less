@@ -1,44 +1,125 @@
 .photo__list {
-  outline: 1px solid red;
-  margin: 0 1px;
-  padding: 20px;
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
   list-style-type: none;
 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+    padding-right: 60px;
+
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .photo__item {
-  outline: 3px dashed olive;
   margin-top: 22px;
   font-size: 14px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 50%;
+    margin-top: 0;
+  }
 }
 
-.photo__item-info-wrapper {
-  outline: 1px solid rebeccapurple;
-  display: flex;
-  flex-direction: column;
+.photo__item--current {
+  max-width: 100%;
+
+  & .photo__item-image {
+    @media (min-width: @tablet-width) {
+      height: 400px;
+    }
+  }
 }
 
 .photo__item-image {
+  position: relative;
   background-color: @light-blue;
+  display: block;
 
   object-fit: cover;
   height: 280px;
   width: 100%;
   max-width: 324px;
+
+  @media (min-width: @tablet-width) {
+    height: 267px;
+    max-width: 100%;
+  }
+}
+
+.photo__item-info-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 0 11px 0 15px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 0 15px 22px;
+    background-color: @background-grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -85px;
+    z-index: 2;
+    color: @basic-white;
+    background-color: @background-black-opacity;
+  }
+}
+
+.photo__item-info {
+  line-height: 24px;
 }
 
 .photo__item-title {
   font-weight: 700;
+  margin: 0;
 }
 
 .photo__author {
   text-transform: none;
+  text-align: left;
+  margin: 0;
+
 }
 
 .photo__likes-number {
   font-weight: 700;
+  width: 90px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 85px;
+  }
+}
+
+.photo__likes-svg {
+  margin-right: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    & path {
+      fill: @basic-white;
+    }
+  }
 }
