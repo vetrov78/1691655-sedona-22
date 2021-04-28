@@ -52,41 +52,21 @@
   height: 56px;
   background-color: @basic-white;
   order: 2;
-
-  & .main-navigation__logo--tablet {
-    display: none;
-  }
-
-  & .main-navigation__logo--desktop {
-    display: none;
-  }
-
-  @media (min-width: @tablet-width) {
-    & .main-navigation__logo--mobile {
-      display: none;
-    }
-
-    & .main-navigation__logo--tablet {
-      display: block;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    & .main-navigation__logo--tablet {
-      display: none;
-    }
-
-    & .main-navigation__logo--desktop {
-      display: block;
-    }
-  }
 }
 
+//положение логотипа
 .main-navigation__logo-link {
   position: absolute;
   z-index: 1;
   left: 50%;
   transform: translateX(-50px);
+
+  & img {
+    @media (min-width: @desktop-width) {
+      height: 97px;
+      width: 187px;
+    }
+  }
 }
 
 //стилизация элементов меню
