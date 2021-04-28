@@ -38,9 +38,25 @@
 }
 
 .page-footer__socials-item {
+  display: block;
+
   background-color: @light-blue;
   fill: @basic-white;
   margin-right: 6px;
+
+  &:hover {
+    background-color: @blue;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: @blue;
+  }
+
+  &:active {
+    background-color: @dark-blue;
+    fill: @active-link-text;
+  }
 }
 
 .page-footer__copyright-text {

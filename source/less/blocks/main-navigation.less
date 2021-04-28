@@ -89,6 +89,7 @@
     background-color: @blue;
   }
   &:focus  {
+    outline: none;
     background-color: @blue;
   }
   &:active {
@@ -105,6 +106,36 @@
 
     background-color: @basic-white;
     color: @basic-black;
+
+    &:hover {
+      background-color: @basic-white;
+      color: @blue;
+    }
+    &:focus  {
+      outline: none;
+      background-color: @basic-white;
+      color: @blue;
+    }
+    &:active {
+      background-color: @basic-white;
+      color: @black-more-opacity;
+    }
+  }
+}
+// интерактивность текущего элемента меню
+.main-navigation__item--current .main-navigation__item-link {
+  @media (min-width: @tablet-width) {
+    color: @basic-brown;
+
+    &:hover {
+      color: @dark-brown;
+    }
+
+    &:active {
+      color: @basic-brown;
+      opacity: 0.3;
+    }
+
   }
 }
 
@@ -131,6 +162,19 @@
 
   @media (min-width: @tablet-width) {
     background: none;
+
+    &:hover {
+      background-color: @basic-white;
+      color: @blue;
+    }
+    &:focus  {
+      background-color: @basic-white;
+      color: @blue;
+    }
+    &:active {
+      background-color: @basic-white;
+      color: @black-more-opacity;
+    }
   }
 }
 
@@ -176,11 +220,23 @@
 .main-navigation__open-icon {
   fill: @light-blue;
 
+  &:hover {
+    fill: @open-toggle-hover;
+  }
+
   &:active {
-    fill: black;
+    fill: @open-toggle-active;
   }
 }
 
 .main-navigation__close-icon {
   fill: @basic-white;
+
+  &:hover {
+    fill: @close-toggle-hover;
+  }
+
+  &:active {
+    fill: @active-link-text;
+  }
 }
