@@ -105,6 +105,19 @@
 
     background-color: @basic-white;
     color: @basic-black;
+
+    &:hover {
+      background-color: @basic-white;
+      color: @light-blue;
+    }
+    &:focus  {
+      background-color: @basic-white;
+      background-color: @light-blue;
+    }
+    &:active {
+      background-color: @basic-white;
+      color: @video-bar-background;
+    }
   }
 }
 
@@ -176,11 +189,23 @@
 .main-navigation__open-icon {
   fill: @light-blue;
 
+  &:hover {
+    fill: @open-toggle-hover;
+  }
+
   &:active {
-    fill: black;
+    fill: @open-toggle-active;
   }
 }
 
 .main-navigation__close-icon {
   fill: @basic-white;
+
+  &:hover {
+    fill: @close-toggle-hover;
+  }
+
+  &:active {
+    fill: @active-link-text;
+  }
 }
