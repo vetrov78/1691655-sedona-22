@@ -77,6 +77,34 @@
   height: 56px;
   background-color: @basic-white;
   order: 2;
+
+  & .main-navigation__logo--tablet {
+    display: none;
+  }
+
+  & .main-navigation__logo--desktop {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    & .main-navigation__logo--mobile {
+      display: none;
+    }
+
+    & .main-navigation__logo--tablet {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    & .main-navigation__logo--tablet {
+      display: none;
+    }
+
+    & .main-navigation__logo--desktop {
+      display: block;
+    }
+  }
 }
 
 .main-navigation__logo-link {

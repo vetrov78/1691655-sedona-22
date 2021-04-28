@@ -14,36 +14,52 @@
   <body class="page__body">
 
     <header class="page-header">
-      <a class="page-header__logo">
-        <img src="img/logo.svg" width="101" height="84" alt="Логотип сайта">
-      </a>
 
-      <nav class="main-navigation">
-        <button class="main-navigation__toggle" type="button">
-          <span>Бургер</span>
-        </button>
+      <nav class="main-navigation main-navigation--closed main-navigation--nojs">
+        <div class="main-navigation__toggle">
+          <span class="visually-hidden">Открыть меню</span>
+
+          <svg class="main-navigation__open-icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.9 0H0V4H22.9V0Z"/>
+            <path d="M22.9 9H0V13H22.9V9Z"/>
+            <path d="M22.9 18H0V22H22.9V18Z"/>
+          </svg>
+          <svg class="main-navigation__close-icon" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z"/>
+          </svg>
+
+        </div>
 
         <ul class="main-navigation__list">
-          <li class="main-navigation__item main-navigation__item--current">
-            <a href="index.html">
+
+          <li class="main-navigation__item main-navigation__item--1 ">
+            <a class="main-navigation__item-link" href="index.html">
               Главная
             </a>
           </li>
-          <li class="main-navigation__item">
-            <a>
+          <li class="main-navigation__item main-navigation__item--2 main-navigation__item--current">
+            <a class="main-navigation__item-link">
               Фото и видео
             </a>
           </li>
-          <li class="main-navigation__item">
-            <a href="form.html">
+          <li class="main-navigation__item main-navigation__item--3">
+            <a class="main-navigation__item-link" href="form.html">
               Форма Отзыва
             </a>
           </li>
-          <li class="main-navigation__item">
-            <a href="https://htmlacademy.ru/" target="_blank">
+          <li class="main-navigation__item main-navigation__item--4">
+            <a class="main-navigation__item-link" href="https://htmlacademy.ru/" target="_blank">
               HTML ACADEMY
             </a>
-            </li>
+          </li >
+          <li class="main-navigation__item--logo">
+            <a class="main-navigation__logo-link" href="index.html">
+              <img class="main-navigation__logo--mobile" src="img/logotyle-mobile.svg" width="102" height="84" alt="Логотип сайта для мобильной версии">
+              <img class="main-navigation__logo--tablet" src="img/logotype-tablet.svg" width="102" height="84" alt="Логотип сайта для планшетной версии">
+              <img class="main-navigation__logo--desktop" src="img/logotype-desktop.svg" width="187" height="97" alt="Логотип сайта для десктопной версии">
+            </a>
+          </li>
+
         </ul>
       </nav>
 
@@ -54,10 +70,13 @@
       <h1 class="visually-hidden">Фото и видео Седоны</h1>
 
       <section class="intro">
-        <h2 class="visually-hidden">Предложение насладиться фотографиями Седоны</h2>
+        <h2 class="visually-hidden">Предложение оставить отзыв</h2>
 
-        <img class="intro__image-text" src="img/form-intro-image-text.svg" width="229" height="39" alt="Приветственная надпись">
-        <img class="intro__image" src="img/background.jpg" width="902" height="214" alt="Приветственный рисунок">
+        <div class="intro__image-other-page">
+          <img class="intro__image-other-page-text" src="img/form-intro-image-text.svg" width="229" height="39" alt="Приветственная надпись">
+          <img class="intro__image-background-other-page" src="img/background.jpg" width="1200" height="518" alt="Приветственный рисунок">
+          <img class="intro__bottom-triangle" src="img/intro-triangle.svg" width="1200" height="57" alt="Декоративная нижняя граница интро"></img>
+        </div>
 
         <div class="intro__text">
           <h3 class="intro__text-title">Фото и видео</h3>
@@ -68,60 +87,71 @@
 
       <section class="photo">
         <h2 class="vissually-hidden">Фотографии туристов</h2>
+
         <ul class="photo__list">
           <li class="photo__item photo__item--current">
-            <img class="photo__item-image" src="img/photo-1.jpg" width="280" height="280" alt="Дорога в прерии, уходящая на восход">
-            <div class="photo__item-info">
-              <h3 class="photo__item-title">неродные просторы</h3>
-              <p class="photo__author">Автор фото: Борис</p>
-            </div>
-            <div class="photo__likes-number">
-              <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="grey"/>
-              </svg>
-              1350
+            <img class="photo__item-image" src="img/photo-1.jpg" width="1200" height="400" alt="Дорога в прерии, уходящая на восход">
+
+            <div class="photo__item-info-wrapper">
+              <div class="photo__item-info">
+                <h3 class="photo__item-title">неродные просторы</h3>
+                <p class="photo__author">Автор фото: Борис</p>
+              </div>
+
+              <div class="photo__likes-number">
+                <svg class="photo__likes-svg" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="grey"/>
+                </svg>
+                1350
+              </div>
             </div>
           </li>
 
           <li class="photo__item">
-            <img class="photo__item-image" src="img/photo-2.jpg" width="280" height="280" alt="Кактусы, на заднем плане скалы">
-            <div class="photo__item-info">
-              <h3 class="photo__item-title">Местная растительность</h3>
-              <p class="photo__author">Автор фото: Сергей</p>
-            </div>
-            <div class="photo__likes-number">
-              <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="grey"/>
-              </svg>
-              143
-            </div>
-          </li>
-
-          <li class="photo__item">
-            <img class="photo__item-image" src="img/photo-3.jpg" width="280" height="280" alt="Дорога, петляющая в лесистых горах">
-            <div class="photo__item-info">
-              <h3 class="photo__item-title">Дорога на север</h3>
-              <p class="photo__author">Автор фото: Петр</p>
-            </div>
-            <div class="photo__likes-number">
-              <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="grey"/>
-              </svg>
-              96
+            <img class="photo__item-image" src="img/photo-2.jpg" width="400" height="267" alt="Кактусы, на заднем плане скалы">
+            <div class="photo__item-info-wrapper">
+              <div class="photo__item-info">
+                <h3 class="photo__item-title">Местная растительность</h3>
+                <p class="photo__author">Автор фото: Сергей</p>
+              </div>
+              <div class="photo__likes-number">
+                <svg class="photo__likes-svg" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="grey"/>
+                </svg>
+                143
+              </div>
             </div>
           </li>
 
           <li class="photo__item">
-            <img class="photo__item-image" src="img/photo-4.jpg" width="280" height="280" alt="Скалы, носящие имя мост дьявола">
-            <div class="photo__item-info">
-              <h3 class="photo__item-title">Мост дьявола</h3>
-              <p class="photo__author">Автор фото: Антон</p>
+            <img class="photo__item-image" src="img/photo-3.jpg" width="400" height="267" alt="Дорога, петляющая в лесистых горах">
+            <div class="photo__item-info-wrapper">
+              <div class="photo__item-info">
+                <h3 class="photo__item-title">Дорога на север</h3>
+                <p class="photo__author">Автор фото: Петр</p>
+              </div>
+              <div class="photo__likes-number">
+                <svg class="photo__likes-svg" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="grey"/>
+                </svg>
+                96
+              </div>
             </div>
-            <div class="photo__likes-number">
-              <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="grey"/>
-              </svg>
-              254
+          </li>
+
+          <li class="photo__item">
+            <img class="photo__item-image" src="img/photo-4.jpg" width="400" height="267" alt="Скалы, носящие имя мост дьявола">
+            <div class="photo__item-info-wrapper">
+              <div class="photo__item-info">
+                <h3 class="photo__item-title">Мост дьявола</h3>
+                <p class="photo__author">Автор фото: Антон</p>
+              </div>
+              <div class="photo__likes-number">
+                <svg class="photo__likes-svg" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="grey"/>
+                </svg>
+                254
+              </div>
             </div>
           </li>
         </ul>
@@ -129,12 +159,24 @@
       </section>
 
       <section class="video">
-        <h2 class="vissually-hidden">Видеопрезентация Седоны</h2>
+        <h2 class="visually-hidden">Видеопрезентация Седоны</h2>
         <div class="video__text-wrapper">
-          <h3 class="video__title">Все еще сомневаетесь?</h3>
+          <h3 class="video__text-title">Все еще сомневаетесь?</h3>
           <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         </div>
-        <div class="video__container"></div>
+        <div class="video__container">
+          <div class="video__image">
+            <img class="video__mobile" src="img/video-mobile.jpg" width="320" height="201" alt="Кадр видеопрезентации Седоны на мобильном устройстве">
+            <img class="video__tablet" src="img/video-desktop-1.jpg" width="648" height="500" alt="Кадр видеопрезентации Седоны на планшете">
+            <img class="video__desktop" src="img/video-desktop.jpg" width="800" height="500" alt="Кадр видеопрезентации Седоны на десктопе">
+          </div>
+          <div class="video__controls">
+            <div class="video__controls-replay">replay</div>
+            <div class="video__controls-bar">bar</div>
+            <div class="video__controls-subtitles-screen">subtitles-screen</div>
+          </div>
+
+        </div>
       </section>
 
     </main>
@@ -182,5 +224,23 @@
       </div>
     </footer>
 
+    <script>
+      var navMain = document.querySelector(".main-navigation")
+      var navToggle = document.querySelector(".main-navigation__toggle");
+
+      navMain.classList.remove("main-navigation--nojs");
+      navMain.classList.remove("main-navigation--opened");
+      navMain.classList.add("main-navigation--closed");
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains("main-navigation--closed")) {
+          navMain.classList.add("main-navigation--opened");
+          navMain.classList.remove("main-navigation--closed");
+        } else {
+          navMain.classList.remove("main-navigation--opened");
+          navMain.classList.add("main-navigation--closed");
+        }
+      });
+    </script>
   </body>
 </html>
