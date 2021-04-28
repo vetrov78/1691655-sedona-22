@@ -46,31 +46,6 @@
   }
 }
 
-//стилизация элементов меню
-.main-navigation__item {
-  text-align: center;
-  font-weight: 700;
-  line-height: 40px;
-
-  padding-top: 10px;
-  padding-bottom: 5px;
-
-  background-color: @light-blue;
-  color: @basic-white;
-
-  @media (min-width: @tablet-width) {
-    box-shadow: none;
-    font-size: 14px;
-    line-height: 26px;
-
-    padding-top: 16px;
-    padding-bottom: 14px;
-
-    background-color: @basic-white;
-    color: @basic-black;
-  }
-}
-
 //стилизация элемента меню с логотипом
 .main-navigation__item--logo {
   width: 100%;
@@ -114,8 +89,47 @@
   transform: translateX(-50px);
 }
 
+//стилизация элементов меню
+.main-navigation__item-link {
+  text-align: center;
+  font-weight: 700;
+  line-height: 40px;
+
+  color: inherit;
+  text-decoration: inherit;
+
+  padding-top: 10px;
+  padding-bottom: 5px;
+
+  display: block;
+  background-color: @light-blue;
+  color: @basic-white;
+
+  &:hover {
+    background-color: @blue;
+  }
+  &:focus  {
+    background-color: @blue;
+  }
+  &:active {
+    color: @active-link-text;
+  }
+
+  @media (min-width: @tablet-width) {
+    box-shadow: none;
+    font-size: 14px;
+    line-height: 26px;
+
+    padding-top: 16px;
+    padding-bottom: 14px;
+
+    background-color: @basic-white;
+    color: @basic-black;
+  }
+}
+
 // тени для элементов мобильного меню
-.main-navigation__item:nth-child(n+2) {
+.main-navigation__item:nth-child(n+2) a{
   margin-top: 1px;
   box-shadow: 0 -1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 
@@ -124,18 +138,20 @@
     box-shadow: none;
   }
 }
-
-.main-navigation__item:nth-last-child(2) {
+// градиент для нижнего пункта
+.main-navigation__item:nth-last-child(2) a{
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 87%, rgba(0, 0, 0, 0.2) 100%);
+
+  &:hover {
+    background-color: @blue;
+  }
+  &:focus  {
+    background-color: @blue;
+  }
 
   @media (min-width: @tablet-width) {
     background: none;
   }
-}
-
-.main-navigation__item-link {
-  color: inherit;
-  text-decoration: inherit;
 }
 
 //состояние при закрытом мобильном меню
