@@ -89,6 +89,7 @@
     background-color: @blue;
   }
   &:focus  {
+    outline: none;
     background-color: @blue;
   }
   &:active {
@@ -108,16 +109,33 @@
 
     &:hover {
       background-color: @basic-white;
-      color: @light-blue;
+      color: @blue;
     }
     &:focus  {
+      outline: none;
       background-color: @basic-white;
-      background-color: @light-blue;
+      color: @blue;
     }
     &:active {
       background-color: @basic-white;
-      color: @video-bar-background;
+      color: @black-more-opacity;
     }
+  }
+}
+// интерактивность текущего элемента меню
+.main-navigation__item--current .main-navigation__item-link {
+  @media (min-width: @tablet-width) {
+    color: @basic-brown;
+
+    &:hover {
+      color: @dark-brown;
+    }
+
+    &:active {
+      color: @basic-brown;
+      opacity: 0.3;
+    }
+
   }
 }
 
@@ -144,6 +162,19 @@
 
   @media (min-width: @tablet-width) {
     background: none;
+
+    &:hover {
+      background-color: @basic-white;
+      color: @blue;
+    }
+    &:focus  {
+      background-color: @basic-white;
+      color: @blue;
+    }
+    &:active {
+      background-color: @basic-white;
+      color: @black-more-opacity;
+    }
   }
 }
 

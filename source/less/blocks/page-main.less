@@ -1,9 +1,23 @@
+.page-main__booking-offer {
+  padding: 33px 29px 27px;
+}
+
+.page-main__booking-offer-title{
+  margin: 0;
+  font-size: 21px;
+}
+
+.page-main__booking-offer-text{
+  margin: 0;
+  margin-top: 21px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
 .page-main__search-button {
   cursor: pointer;
-
   width: 280px;
-  font-size: 21px;
-  font-weight: 700;
+  font: 700 21px "PT Sans";
   color: @basic-white;
   text-transform: uppercase;
   background-color: @light-blue;
@@ -14,6 +28,22 @@
   @media (min-width: @tablet-width) {
     width: 458px;
   }
+
+  &:hover {
+    background-color: @blue;
+  }
+  &:focus {
+    outline: none;
+    background-color: @blue;
+  }
+  &:active{
+    background-color: @dark-blue;
+    color: @active-link-text;
+  }
+}
+
+.page-main__map {
+  margin-top: 49px;
 }
 
 .page-main__map-image {
