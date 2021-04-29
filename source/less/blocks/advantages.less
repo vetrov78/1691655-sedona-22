@@ -12,7 +12,7 @@
   background-color: @light-grey;
   min-width: 320px;
 
-  padding: 12px 12px;
+  padding: 12px 12px 34px;
   box-sizing: border-box;
 }
 
@@ -36,20 +36,44 @@
 //расположение иконки и текста в блоках с svg
 [class*="advantages__item-with-icon"] {
   background-color: @basic-white;
-
+  padding: 27px 10px 0 21px;
   display: flex;
   flex-direction: row;
+
+  & .advantages__item-title {
+    margin: 0;
+  }
+
+  & .advantages__item-text {
+    margin-top: 17px;
+    line-height: 21px;
+    padding-right: 10px;
+  }
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
   }
 }
 
+.advantages__item-with-icon--house {
+  margin-top: 5px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}
+
+.advantages__item-with-icon--burger {
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}
+
 //расположение иконки в блоке
 [class*="advantages__icon"] {
   margin: 0;
-  margin-top: 14px;
-
   flex-shrink: 0;
   flex-grow: 0;
 
@@ -63,6 +87,7 @@
   height: 37px;
   background-image: url("../../img/icon-house.svg");
   background-repeat: no-repeat;
+  margin-top: -5px;
 
   @media (min-width: @tablet-width) {
     background-size: contain;
@@ -76,6 +101,8 @@
   height: 38px;
   background-image: url("../../img/icon-gift.svg");
   background-repeat: no-repeat;
+  margin-top: -9px;
+  margin-left: 6px;
 
   @media (min-width: @tablet-width) {
     background-size: contain;
@@ -116,5 +143,12 @@
 }
 
 .advantages__item-title {
-  margin-top: 23px;
+  margin: 0;
+  font-size: 18px;
+}
+
+.advantages__item-text {
+  margin: 0;
+  margin-top: 9px;
+  font-size: 14px;
 }

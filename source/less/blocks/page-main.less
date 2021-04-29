@@ -1,6 +1,5 @@
 .page-main__search-button {
   cursor: pointer;
-
   width: 280px;
   font-size: 21px;
   font-weight: 700;
@@ -13,6 +12,18 @@
 
   @media (min-width: @tablet-width) {
     width: 458px;
+  }
+
+  &:hover {
+    background-color: @blue;
+  }
+  &:focus {
+    outline: none;
+    background-color: @blue;
+  }
+  &:active{
+    background-color: @dark-blue;
+    color: @active-link-text;
   }
 }
 
