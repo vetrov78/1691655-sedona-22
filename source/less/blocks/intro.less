@@ -20,6 +20,7 @@
   @media (min-width: @tablet-width) {
     width: 457px;
     height: 350px;
+    top: 77px;
   }
 
   @media (min-width: @desktop-width) {
@@ -89,15 +90,27 @@
 .intro__text {
   position: relative;
   min-width: 285px;
-  max-width: 483px;
+  max-width: 520px;
   margin: auto;
   padding: 32px 24px 27px 24px;
   box-sizing: border-box;
+
+  @media (min-width:@tablet-width) {
+    padding: 44px 0 54px 0;
+  }
+
+  @media (min-width:@desktop-width) {
+    padding: 55px 0 45px 0;
+  }
 }
 
 .intro__text-title {
   margin: 0;
   font-size: 18px;
+
+  @media (min-width:@tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .intro__text-description {
