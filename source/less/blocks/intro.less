@@ -1,3 +1,7 @@
+.intro {
+  background-color: @basic-white;
+}
+
 //блок интро на главной странице
 .intro__image-index-page {
   background-color: @blue;
@@ -92,15 +96,15 @@
   min-width: 285px;
   max-width: 520px;
   margin: auto;
-  padding: 32px 24px 27px 24px;
+  padding: 32px 24px 12px 24px;
   box-sizing: border-box;
 
-  @media (min-width:@tablet-width) {
+  @media (min-width: @tablet-width) {
     padding: 44px 0 54px 0;
   }
 
-  @media (min-width:@desktop-width) {
-    padding: 55px 0 45px 0;
+  @media (min-width: @desktop-width) {
+    padding: 55px 0 43px 0;
   }
 }
 
@@ -108,7 +112,7 @@
   margin: 0;
   font-size: 18px;
 
-  @media (min-width:@tablet-width) {
+  @media (min-width: @tablet-width) {
     font-size: 21px;
   }
 }
@@ -117,16 +121,4 @@
   margin: 0;
   margin-top: 30px;
   font-size: 14px;
-}
-
-.intro__text-bottom-triangle {
-  position: absolute;
-  transform: translateX(-50%);
-  height: 37px;
-  bottom: -25px;
-  object-fit: cover;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
 }

@@ -25,14 +25,27 @@
   @media (max-width: @mobile-width-only) {
     display: none;
   }
+
   @media (min-width: @desktop-width) {
     display: none;
+  }
+}
+
+.desktop-break {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
   }
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+p {
+  margin: 0;
 }
 
 h2 {
