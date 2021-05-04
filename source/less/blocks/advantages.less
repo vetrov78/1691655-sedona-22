@@ -7,18 +7,43 @@
   }
 }
 
-.advantages__item {
-  //outline: 1px dashed black;
-  background-color: @light-grey;
-  min-width: 320px;
-
-  padding: 12px 12px;
-  box-sizing: border-box;
-}
-
 .advantages__item-with-image {
   background-color: @light-blue;
   color: @basic-white;
+  padding: 39px 0;
+
+  &:nth-of-type(1) {
+    position: relative;
+    padding-top: 73px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 40px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 45px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 32px 44px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 50px 32px 44px;
+  }
+}
+
+.advantages__top-item-triangle {
+  position: absolute;
+  transform: translateX(-50%);
+  height: 37px;
+  top: 0;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .advantages__image {
@@ -30,70 +55,117 @@
   @media (min-width: @tablet-width) {
     height: 256px;
     grid-column: span 2;
+
+    &:nth-of-type(2) {
+      grid-row: 3;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
   }
 }
 
 //расположение иконки и текста в блоках с svg
-[class*="advantages__item-with-icon"] {
+.advantages__item-with-icon {
   background-color: @basic-white;
-
+  padding: 27px 18px 0 21px;
   display: flex;
   flex-direction: row;
 
+  &:nth-of-type(2) {
+    padding-top: 35px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 60px;
+    }
+  }
+
+  &:nth-of-type(4) {
+    padding-bottom: 34px;
+
+    @media (min-width: @tablet-width) {
+      padding-bottom: 60px;
+    }
+  }
+
+  & .advantages__item-title {
+    margin: 0;
+
+    @media (min-width: @tablet-width) {
+      margin: 17px auto 0;
+    }
+  }
+
+  & .advantages__item-text {
+    margin-top: 17px;
+    line-height: 21px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 22px;
+      padding: 0 30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0 48px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
+    padding: 0;
+    padding-top: 60px;
+    padding-bottom: 64px;
     flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 81px;
   }
 }
 
 //расположение иконки в блоке
-[class*="advantages__icon"] {
+.advantages__icon {
   margin: 0;
-  margin-top: 14px;
-
   flex-shrink: 0;
   flex-grow: 0;
-
-  @media (min-width: @tablet-width) {
-    margin: auto;
-  }
 }
 
 .advantages__icon--house {
   width: 39px;
   height: 37px;
-  background-image: url("../../img/icon-house.svg");
-  background-repeat: no-repeat;
+  margin-top: -5px;
 
   @media (min-width: @tablet-width) {
     background-size: contain;
     width: 75px;
     height: 72px;
+    margin: 0;
   }
 }
 
 .advantages__icon--gift {
   width: 32px;
   height: 38px;
-  background-image: url("../../img/icon-gift.svg");
-  background-repeat: no-repeat;
+  margin-top: -9px;
+  margin-left: 6px;
 
   @media (min-width: @tablet-width) {
     background-size: contain;
     width: 64px;
     height: 75px;
+    margin: 0;
   }
 }
 
 .advantages__icon--burger {
   width: 40px;
   height: 35px;
-  background-image: url("../../img/icon-burger.svg");
-  background-repeat: no-repeat;
+  margin-top: -5px;
 
   @media (min-width: @tablet-width) {
     background-size: contain;
     width: 76px;
     height: 68px;
+    margin-top: 5px;
   }
 }
 
@@ -112,9 +184,55 @@
 
   @media (min-width: @tablet-width) {
     text-align: center;
+    padding-left: 0;
+  }
+}
+
+.advantages__item {
+  background-color: @light-grey;
+  padding: 25px 20px 0;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 20px 20px;
+    min-height: 256px;
   }
 }
 
 .advantages__item-title {
-  margin-top: 23px;
+  margin: 0;
+  font-size: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    width: 151px;
+    margin: 0 auto;
+  }
+}
+
+.advantages__item-text {
+  margin: 0;
+  margin-top: 13px;
+  font-size: 14px;
+  line-height: 21px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 18px;
+  }
+}
+
+.advantages__item-text-description {
+  margin-bottom: 28px;
+  padding: 0 11px;
+}
+
+.advantages__item-bottom-line {
+  display: block;
+  background: @line-grey;
+  height: 1px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

@@ -1,9 +1,42 @@
+.page-main__booking-offer {
+  padding: 33px 29px 27px;
+
+  @media (min-width: @tablet-width) {
+    padding: 55px 0 37px;
+    width: 435px;
+    margin: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 44px;
+  }
+}
+
+.page-main__booking-offer-title {
+  margin: 0;
+  font-size: 21px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
+}
+
+.page-main__booking-offer-text {
+  max-width: 458px;
+  margin: 21px auto 0;
+  font-size: 14px;
+  line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin: 33px auto 0;
+  }
+}
+
 .page-main__search-button {
   cursor: pointer;
-
-  width: 280px;
-  font-size: 21px;
-  font-weight: 700;
+  width: 88%;
+  max-width: 458px;
+  font: 700 21px "PT Sans", "Arial", sans-serif;
   color: @basic-white;
   text-transform: uppercase;
   background-color: @light-blue;
@@ -13,6 +46,32 @@
 
   @media (min-width: @tablet-width) {
     width: 458px;
+  }
+
+  &:hover {
+    background-color: @blue;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: @blue;
+  }
+
+  &:active {
+    background-color: @dark-blue;
+    color: @active-link-text;
+  }
+}
+
+.page-main__map {
+  margin-top: 49px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 68px;
   }
 }
 
