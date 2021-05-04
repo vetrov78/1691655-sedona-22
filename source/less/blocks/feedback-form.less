@@ -39,16 +39,14 @@
 //общая стилизация названия поля
 .feedback-form__label {
   font-size: 14px;
-  margin-top: 5px;
-  //outline: 1px dashed black;
 }
 
 //общая стилизация поля ввода
 .feedback-form__input {
+  position: relative;
   border: none;
   background-color: @light-grey;
   padding: 18px 10px 14px 22px;
-
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -80,7 +78,6 @@
 
 // блок информации о контактах
 .feedback-form__item--contacts {
-
   display: grid;
   grid-template-rows: repeat(3, auto);
 
@@ -103,6 +100,7 @@
   }
 
   & .feedback-form__label {
+    position: relative;
     text-indent: 22px;
     text-align: start;
     white-space: nowrap;
@@ -118,10 +116,18 @@
 
   & .feedback-form__input {
     margin: 0;
+    height: 58px;
+    box-sizing: border-box;
 
     @media (min-width: @desktop-width) {
       width: 358px;
     }
+  }
+
+  & .feedback-form__icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 }
 
@@ -133,9 +139,48 @@
     order: 1;
   }
 
+  & input:checked,
+    input:not(:checked) {
+    position: absolute;
+    left: -9999px;
+  }
+
   & .feedback-form__label {
     font-weight: 700;
-    padding: 11px 0;
+    font-size: 18px;
+    margin-top: 43px;
+    padding-left: 74px;
+    white-space: nowrap;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      transform: translateY(-16px);
+      width: 48px;
+      height: 48px;
+      background-color: @light-grey;
+      border: 5px solid @light-grey;
+      border-radius: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 17px;
+      transform: translateY(1px);
+      width: 18px;
+      height: 18px;
+      background-color: @light-black;
+      border: 3px solid @light-black;
+      border-radius: 100%;
+    }
+  }
+
+  & input:not(:checked) + .feedback-form__label::after {
+    opacity: 0;
   }
 }
 
@@ -170,6 +215,50 @@
       grid-column-end: 5;
     }
   }
+
+  & input:checked,
+    input:not(:checked) {
+    position: absolute;
+    left: -9999px;
+  }
+
+  & .feedback-form__label {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 43px;
+    padding-left: 74px;
+    white-space: nowrap;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      transform: translateY(-16px);
+      width: 48px;
+      height: 48px;
+      background-color: @light-grey;
+      border: 5px solid @light-grey;
+      border-radius: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 17px;
+      transform: translateY(1px);
+      width: 18px;
+      height: 18px;
+      background-color: @light-black;
+      border: 3px solid @light-black;
+      border-radius: 100%;
+    }
+  }
+
+  & input:not(:checked) + .feedback-form__label::after {
+    opacity: 0;
+  }
 }
 
 .feedback-form__item--emotions {
@@ -192,7 +281,6 @@
   }
 }
 
-
 .feedback-form__item--6 {
   @media (min-width: @tablet-width) {
 
@@ -205,11 +293,9 @@
 
 .feedback-form__button {
   cursor: pointer;
-
   width: 280px;
   padding-top: 18px;
   padding-bottom: 13px;
-
   font-size: 21px;
   font-weight: 700;
   color: @basic-white;
@@ -228,7 +314,6 @@
 
 .feedback-form__bottom-text {
   display: none;
-
   color: @light-black;
 
   @media (min-width: @tablet-width) {
