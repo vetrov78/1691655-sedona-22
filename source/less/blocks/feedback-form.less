@@ -50,6 +50,7 @@
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
+  line-height: 26px;
 }
 
 //блок ФИО
@@ -73,6 +74,16 @@
 
     text-align: start;
     white-space: nowrap;
+
+    & input:hover {
+      background-color: @grey;
+      outline: none;
+    }
+
+    & input:focus, input:active {
+      background-color: @basic-white;
+      outline: 4px solid @grey;
+    }
   }
 }
 
@@ -296,6 +307,10 @@
   }
 }
 
+.feedback-form__title-emotions {
+  font-size: 18px;
+}
+
 .feedback-form__text-emotions {
   background-color: @light-grey;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -326,6 +341,7 @@
   padding-bottom: 13px;
   font-size: 21px;
   font-weight: 700;
+  line-height: 26px;
   color: @basic-white;
   text-transform: uppercase;
   background-color: @light-blue;
