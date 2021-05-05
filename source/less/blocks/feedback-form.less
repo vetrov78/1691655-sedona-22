@@ -8,11 +8,12 @@
 
 //общая стилизация блоков формы отзыва
 .feedback-form__item {
+  position: relative;
   margin: 0;
-  padding: 20px;
+  padding: 45px 20px 25px;
   box-sizing: border-box;
   border: none;
-
+  border-top: 1px solid @grey;
   min-width: 320px;
   max-width: 1200px;
 
@@ -20,16 +21,14 @@
 
   display: flex;
   flex-direction: column;
-  //align-items: flex-start;
 }
 
 //общая стилизация названия блока
 .feedback-form__legend {
+  outline: 1px dashed yellowgreen;
+  position: absolute;
   font-weight: 700;
-  margin: 0 auto;
-  height: 5px;
-
-  text-align: center;
+  white-space: nowrap;
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
@@ -60,6 +59,10 @@
   }
 
   & .feedback-form__legend {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-70px);
+
     @media (min-width: @tablet-width) {
       text-align: left;
     }
@@ -74,6 +77,7 @@
 
     text-align: start;
     white-space: nowrap;
+    margin-top: 20px;
 
     & input:hover {
       background-color: @grey;
@@ -104,6 +108,10 @@
   }
 
   & .feedback-form__legend {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-120px);
+
     @media (min-width: @desktop-width) {
       grid-column-start: 1;
       grid-column-end: 3;
@@ -112,6 +120,7 @@
 
   & .feedback-form__label {
     position: relative;
+    margin-top: 18px;
     text-indent: 22px;
     text-align: start;
     white-space: nowrap;
@@ -127,6 +136,7 @@
 
   & .feedback-form__input {
     margin: 0;
+    margin-top: 5px;
     height: 58px;
     box-sizing: border-box;
 
@@ -150,26 +160,31 @@
     order: 1;
   }
 
-  & input:checked,
-    input:not(:checked) {
-    position: absolute;
-    left: -9999px;
+  & .feedback-form__legend {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-120px);
   }
 
   & .feedback-form__label {
     font-weight: 700;
     font-size: 18px;
-    margin-top: 43px;
+    text-transform: lowercase;
+    margin-top: 42px;
     padding-left: 74px;
     white-space: nowrap;
     position: relative;
     cursor: pointer;
 
+    &:first-letter {
+      text-transform: capitalize;
+    }
+
     &::before {
       content: "";
       position: absolute;
       left: 0;
-      transform: translateY(-16px);
+      transform: translateY(-18px);
       width: 48px;
       height: 48px;
       background-color: @light-grey;
@@ -181,9 +196,8 @@
       content: "";
       position: absolute;
       left: 17px;
-      transform: translateY(1px);
-      width: 18px;
-      height: 18px;
+      width: 15px;
+      height: 15px;
       background-color: @light-black;
       border: 3px solid @light-black;
       border-radius: 100%;
@@ -204,6 +218,12 @@
     }
   }
 
+  & input:checked,
+  input:not(:checked) {
+  position: absolute;
+  left: -9999px;
+  }
+
   & input:not(:checked) + .feedback-form__label::after {
     opacity: 0;
   }
@@ -212,6 +232,7 @@
 
 //блок посещенных достопримечательностей
 .feedback-form__item--visited-attraction {
+  margin-top: 16px;
   align-items: flex-start;
 
   @media (min-width: @tablet-width) {
@@ -230,6 +251,10 @@
   }
 
   & .feedback-form__legend {
+    top: 15px;
+    left: 50%;
+    transform: translateX(-120px);
+
     @media (min-width: @tablet-width) {
       grid-column-start: 1;
       grid-column-end: 3;
@@ -251,11 +276,16 @@
   & .feedback-form__label {
     font-weight: 700;
     font-size: 18px;
-    margin-top: 43px;
-    padding-left: 74px;
+    text-transform: lowercase;
+    margin-top: 55px;
+    padding-left: 78px;
     white-space: nowrap;
     position: relative;
     cursor: pointer;
+
+    &::first-letter{
+      text-transform: capitalize;
+    }
 
     &::before {
       content: "";
@@ -272,9 +302,10 @@
     &::after {
       content: "";
       position: absolute;
-      left: 15px;
-      width: 23px;
-      height: 16px;
+      top: 4px;
+      left: 17px;
+      width: 18px;
+      height: 10px;
       border-left: 5px solid @basic-black;
       border-bottom: 5px solid @basic-black;
       transform: rotate(-45deg);
@@ -301,6 +332,9 @@
 }
 
 .feedback-form__item--emotions {
+  margin-top: 14px;
+  padding-top: 20px;
+
   @media (min-width: @tablet-width) {
     grid-column: 1;
     grid-column-end: 3;
@@ -308,6 +342,7 @@
 }
 
 .feedback-form__title-emotions {
+  margin: 0;
   font-size: 18px;
 }
 
@@ -317,7 +352,11 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
-  padding: 18px 21px 24px 21px;
+  padding: 13px 23px 29px 21px;
+  margin-top: 15px;
+  border: 0;
+  height: 120px;
+  resize: none;
 
   &::placeholder {
     color: @basic-black;
@@ -325,6 +364,8 @@
 }
 
 .feedback-form__item--6 {
+  padding-top: 24px;
+
   @media (min-width: @tablet-width) {
 
     grid-column: 1;
@@ -336,9 +377,12 @@
 
 .feedback-form__button {
   cursor: pointer;
-  width: 280px;
+  min-width: 280px;
+  width: 100%;
+  max-width: 324px;
   padding-top: 18px;
   padding-bottom: 13px;
+  margin: auto;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
