@@ -112,7 +112,8 @@
       outline: none;
     }
 
-    & input:focus, input:active {
+    & input:focus,
+    input:active {
       background-color: @basic-white;
       outline: 4px solid @grey;
     }
@@ -204,7 +205,7 @@
 
   @media (min-width: @tablet-width) {
     order: 1;
-    border:none;
+    border: none;
     padding-top: 45px;
   }
 
@@ -238,7 +239,7 @@
       margin-top: 52px;
     }
 
-    &:first-letter {
+    &::first-letter {
       text-transform: capitalize;
     }
 
@@ -266,12 +267,12 @@
     }
 
     &:hover::before {
-      background-color:@grey;
+      background-color: @grey;
       border: 5px solid @grey;
     }
 
     &:active::before {
-      background-color:@dark-grey;
+      background-color: @dark-grey;
       border: 5px solid @dark-grey;
     }
 
@@ -282,14 +283,13 @@
 
   & input:checked,
   input:not(:checked) {
-  position: absolute;
-  left: -9999px;
+    position: absolute;
+    left: -9999px;
   }
 
   & input:not(:checked) + .feedback-form__label::after {
     opacity: 0;
   }
-
 }
 
 //блок посещенных достопримечательностей
@@ -340,7 +340,7 @@
   }
 
   & input:checked,
-    input:not(:checked) {
+  input:not(:checked) {
     position: absolute;
     left: -9999px;
   }
@@ -364,7 +364,7 @@
       margin-left: 0;
     }
 
-    &::first-letter{
+    &::first-letter {
       text-transform: capitalize;
     }
 
@@ -393,12 +393,12 @@
     }
 
     &:hover::before {
-      background-color:@grey;
+      background-color: @grey;
       border: 5px solid @grey;
     }
 
     &:active::before {
-      background-color:@dark-grey;
+      background-color: @dark-grey;
       border: 5px solid @dark-grey;
     }
 
