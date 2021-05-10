@@ -37,7 +37,7 @@
 .video__container {
   position: relative;
   max-width: 320px;
-  margin: 0 auto;
+  margin: 33px auto 0;
 
   @media (min-width: @tablet-width) {
     max-width: 648px;
@@ -49,32 +49,14 @@
   }
 }
 
-.video__mobile {
-  display: block;
-  margin-top: 33px;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.video__tablet {
-  display: none;
-
-  @media (min-width: @tablet-width) {
+.video__image {
+  & img {
     display: block;
-  }
 
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
-.video__desktop {
-  display: none;
-
-  @media (min-width: @desktop-width) {
-    display: block;
+    @media (min-width: @tablet-width) {
+      width: 648px;
+      height: auto;
+    }
   }
 }
 
@@ -166,6 +148,21 @@
     fill: @light-black;
     opacity: 0.3;
   }
+
+  @media (min-width: @tablet-width) {
+    & svg {
+      display: block;
+      fill: @basic-white;
+    }
+
+    & svg:hover {
+      opacity: 0.6;
+    }
+
+    & svg:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .video__controls-subtitles-wrapper {
@@ -182,15 +179,27 @@
   & svg {
     fill: @replay-icon;
     display: block;
-  }
 
-  & svg:hover {
-    fill: @light-black;
-  }
+    &:hover {
+      fill: @light-black;
+    }
 
-  & svg:active {
-    fill: @light-black;
-    opacity: 0.3;
+    &:active {
+      fill: @light-black;
+      opacity: 0.3;
+    }
+
+    @media (min-width: @tablet-width) {
+      fill: @basic-white;
+
+      &:hover {
+        fill: @close-toggle-hover;
+      }
+
+      &:active {
+        fill: @active-link-text;
+      }
+    }
   }
 }
 
@@ -200,14 +209,26 @@
   & svg {
     display: block;
     fill: @replay-icon;
-  }
 
-  & svg:hover {
-    fill: @light-black;
-  }
+    &:hover {
+      fill: @light-black;
+    }
 
-  & svg:active {
-    fill: @light-black;
-    opacity: 0.3;
+    &:active {
+      fill: @light-black;
+      opacity: 0.3;
+    }
+
+    @media (min-width: @tablet-width) {
+      fill: @basic-white;
+
+      &:hover {
+        fill: @close-toggle-hover;
+      }
+
+      &:active {
+        fill: @active-link-text;
+      }
+    }
   }
 }
