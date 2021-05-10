@@ -21,6 +21,14 @@
 
   &--catalog {
     margin-top: 55px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 76px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 120px;
+    }
   }
 }
 
@@ -46,11 +54,16 @@
 .page-footer__socials-list {
   list-style: none;
   padding: 0;
+  padding-left: 6px;
   font-size: 0;
   line-height: 0;
 
   display: flex;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 6px;
+  }
 }
 
 .page-footer__socials-item {

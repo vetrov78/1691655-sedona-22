@@ -1,25 +1,30 @@
 .video {
   margin-top: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin: 62px 60px 0;
+  }
 }
 
 .video__text-wrapper {
-  margin: 20px 20px 0;
   padding-left: 28px;
   padding-right: 28px;
   max-width: 445px;
   box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding: 0;
   }
 }
 
 .video__text-title {
   margin: 0;
   font-size: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .video__text {
@@ -27,54 +32,35 @@
   margin-top: 29px;
   font-size: 14px;
   line-height: 24px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 33px;
+  }
 }
 
 .video__container {
   position: relative;
-  max-width: 320px;
-  margin: 0 auto;
+  margin: 33px auto 0;
 
   @media (min-width: @tablet-width) {
-    max-width: 648px;
+    margin-top: 80px;
+    width: 648px;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 800px;
+    width: 800px;
   }
 }
 
-.video__mobile {
-  display: block;
-  margin-top: 33px;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.video__tablet {
-  display: none;
-
-  @media (min-width: @tablet-width) {
+.video__image {
+  & img {
     display: block;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
-.video__desktop {
-  display: none;
-
-  @media (min-width: @desktop-width) {
-    display: block;
+    width: 100%;
   }
 }
 
 .video__controls {
   position: relative;
-  max-width: 100%;
   height: 66px;
   background-color: @light-grey;
   display: flex;
@@ -91,7 +77,10 @@
     background-color: @video-bar-background;
     margin: 0;
     width: 100%;
+    box-sizing: border-box;
     height: 93px;
+    padding-left: 35px;
+    padding-right: 42px;
   }
 }
 
@@ -120,6 +109,15 @@
   width: 85%;
   margin: 22px auto;
 
+  @media (min-width: @tablet-width) {
+    margin: 45px auto;
+    width: 389px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 540px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -130,6 +128,10 @@
     width: 10px;
     border-radius: 50%;
     background-color: @basic-white;
+
+    @media (min-width: @tablet-width) {
+      left: 112px;
+    }
   }
 }
 
@@ -149,10 +151,25 @@
     fill: @light-black;
     opacity: 0.3;
   }
+
+  @media (min-width: @tablet-width) {
+    & svg {
+      fill: @basic-white;
+
+      &:hover {
+        fill: @close-toggle-hover;
+      }
+
+      &:active {
+        fill: @active-link-text;
+      }
+    }
+  }
 }
 
 .video__controls-subtitles-wrapper {
   width: 83px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -164,15 +181,27 @@
   & svg {
     fill: @replay-icon;
     display: block;
-  }
 
-  & svg:hover {
-    fill: @light-black;
-  }
+    &:hover {
+      fill: @light-black;
+    }
 
-  & svg:active {
-    fill: @light-black;
-    opacity: 0.3;
+    &:active {
+      fill: @light-black;
+      opacity: 0.3;
+    }
+
+    @media (min-width: @tablet-width) {
+      fill: @basic-white;
+
+      &:hover {
+        fill: @close-toggle-hover;
+      }
+
+      &:active {
+        fill: @active-link-text;
+      }
+    }
   }
 }
 
@@ -182,14 +211,26 @@
   & svg {
     display: block;
     fill: @replay-icon;
-  }
 
-  & svg:hover {
-    fill: @light-black;
-  }
+    &:hover {
+      fill: @light-black;
+    }
 
-  & svg:active {
-    fill: @light-black;
-    opacity: 0.3;
+    &:active {
+      fill: @light-black;
+      opacity: 0.3;
+    }
+
+    @media (min-width: @tablet-width) {
+      fill: @basic-white;
+
+      &:hover {
+        fill: @close-toggle-hover;
+      }
+
+      &:active {
+        fill: @active-link-text;
+      }
+    }
   }
 }
