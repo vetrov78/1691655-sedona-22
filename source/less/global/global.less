@@ -11,6 +11,12 @@
   overflow: hidden;
 }
 
+.desktop-display--none {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
 .regular-text-style {
   text-transform: capitalize;
 }
