@@ -32,31 +32,30 @@
   margin-top: 29px;
   font-size: 14px;
   line-height: 24px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 33px;
+  }
 }
 
 .video__container {
   position: relative;
-  max-width: 320px;
   margin: 33px auto 0;
 
   @media (min-width: @tablet-width) {
-    max-width: 648px;
-    margin-top: 81px;
+    margin-top: 80px;
+    width: 648px;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 800px;
+    width: 800px;
   }
 }
 
 .video__image {
   & img {
     display: block;
-
-    @media (min-width: @tablet-width) {
-      width: 648px;
-      height: auto;
-    }
+    width: 100%;
   }
 }
 
@@ -115,6 +114,10 @@
     width: 389px;
   }
 
+  @media (min-width: @desktop-width) {
+    width: 540px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -151,16 +154,15 @@
 
   @media (min-width: @tablet-width) {
     & svg {
-      display: block;
       fill: @basic-white;
-    }
 
-    & svg:hover {
-      opacity: 0.6;
-    }
+      &:hover {
+        fill: @close-toggle-hover;
+      }
 
-    & svg:active {
-      opacity: 0.3;
+      &:active {
+        fill: @active-link-text;
+      }
     }
   }
 }
