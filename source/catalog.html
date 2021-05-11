@@ -93,8 +93,11 @@
 
         <ul class="photo__list">
           <li class="photo__item photo__item--current">
-            <img class="photo__item-image" src="img/photo-1.jpg" width="1200" height="400" alt="Дорога в прерии, уходящая на восход">
-
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+              <img class="photo__item-image" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Дорога в прерии, уходящая на восход">
+            </picture>
             <div class="photo__item-info-wrapper">
               <div class="photo__item-info">
                 <h3 class="photo__item-title">неродные просторы</h3>
@@ -111,7 +114,11 @@
           </li>
 
           <li class="photo__item">
-            <img class="photo__item-image" src="img/photo-2.jpg" width="400" height="267" alt="Кактусы, на заднем плане скалы">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+              <img class="photo__item-image" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Кактусы, на заднем плане скалы">
+            </picture>
             <div class="photo__item-info-wrapper">
               <div class="photo__item-info">
                 <h3 class="photo__item-title">Местная растительность</h3>
@@ -127,7 +134,11 @@
           </li>
 
           <li class="photo__item">
-            <img class="photo__item-image" src="img/photo-3.jpg" width="400" height="267" alt="Дорога, петляющая в лесистых горах">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+              <img class="photo__item-image" src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Дорога, петляющая в лесистых горах">
+            </picture>
             <div class="photo__item-info-wrapper">
               <div class="photo__item-info">
                 <h3 class="photo__item-title">Дорога на север</h3>
@@ -143,7 +154,11 @@
           </li>
 
           <li class="photo__item">
-            <img class="photo__item-image" src="img/photo-4.jpg" width="400" height="267" alt="Скалы, носящие имя мост дьявола">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+              <img class="photo__item-image" src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="Скалы, носящие имя мост дьявола">
+            </picture>
             <div class="photo__item-info-wrapper">
               <div class="photo__item-info">
                 <h3 class="photo__item-title">Мост дьявола</h3>
