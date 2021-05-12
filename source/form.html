@@ -228,16 +228,20 @@
       </div>
     </footer>
 
-    <section class="visually-hidden modal modal--failture">
-      <h2>ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
-      <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="modal__button modal__button--failture" type="button">OK</button>
+    <section class="visually-hidden modal modal--failture" >
+      <h2 class="modal__title">ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
+      <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="modal__button modal__button--failture" type="button" autofocus>OK</button>
     </section>
 
     <section class="visually-hidden modal modal--success">
-      <h2>Ваш отзыв отправлен!</h2>
-      <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-      <button class="modal__button modal__button--success" type="button">ЗАкРЫТЬ ОКНО</button>
+      <div class="modal__success-text-wrapper">
+        <h2 class="modal__title">Ваш отзыв отправлен!</h2>
+        <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
+      </div>
+      <div class="modal__success-button-wrapper">
+        <button class="modal__button modal__button--success" type="button">ЗАкРЫТЬ ОКНО</button>
+      </div>
     </section>
 
     <script>
@@ -257,6 +261,25 @@
           navMain.classList.add("main-navigation--closed");
         }
       });
+
+      var feedbackButton = document.querySelector(".feedback-form__button");
+      var modalFailture = document.querySelector(".modal--failture");
+      var modalSuccess = document.querySelector(".modal--success");
+      var modalFailtureButton = document.querySelector(".modal__button--failture");
+      var modalSuccessButton = document.querySelector(".modal__button--success");
+
+      feedbackButton.addEventListener('click', function() {
+        modalFailture.classList.remove("visually-hidden");
+        modalSuccess.classList.remove("visually-hidden");
+      });
+
+      modalFailtureButton.addEventListener('click', function() {
+        modalFailture.classList.add("visually-hidden");
+      });
+      modalSuccessButton.addEventListener('click', function() {
+        modalSuccess.classList.add("visually-hidden");
+      });
+
     </script>
   </body>
 
