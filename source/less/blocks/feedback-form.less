@@ -52,6 +52,20 @@
 //общая стилизация названия поля
 .feedback-form__label {
   font-size: 14px;
+
+  &--till-desktop {
+    @media (min-width:@desktop-width) {
+      display: none;
+    }
+  }
+
+  &--since-desktop {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
 }
 
 //общая стилизация поля ввода

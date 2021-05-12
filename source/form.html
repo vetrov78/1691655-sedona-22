@@ -92,7 +92,7 @@
 
         <div class="intro__text">
           <h3 class="intro__text-title intro__text-title--big-size">Оставьте свой отзыв</h3>
-          <p class="intro__text-description">Помогите нашим отелям стать лучше! оставьте отзыв о них,<br> а также о посещенных вами достопримечательностях</p>
+          <p class="intro__text-description">Помогите нашим отелям стать лучше! оставьте отзыв о них,<br class="tablet-break">а также о посещенных вами достопримечательностях</p>
         </div>
       </section>
 
@@ -120,7 +120,9 @@
           <fieldset class="feedback-form__item feedback-form__item--contacts" name="contacts">
             <legend class="feedback-form__legend">контактная информация:</legend>
 
-            <label class="feedback-form__label" for="phone"><span class="desktop-display--none">контактный&nbsp;</span>телефон*:
+            <label class="feedback-form__label" for="phone">
+              <span class="feedback-form__label--till-desktop">контактный&nbsp;телефон*:</span>
+              <span class="feedback-form__label--since-desktop">телефон*:</span>
               <input class="feedback-form__input" size="10" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" id="phone" placeholder="Введите телефон" required>
               <svg class="feedback-form__icon" width="58" height="58">
                 <path d="M58 0H0v58h58V0z"/>
@@ -183,7 +185,7 @@
 
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer page-footer--form-page">
       <div class="page-footer__contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <p class="page-footer__text">#VISITSEDONA</p>

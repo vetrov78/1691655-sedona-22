@@ -17,6 +17,20 @@
   </head>
 
   <body class="page__body">
+    <svg style="display: none;">
+      <symbol viewBox="0 0 27 35" id="copyright-logo">
+        <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"/>
+      </symbol>
+      <symbol viewBox="0 0 45 48" id="twitter-logo">
+        <path d="M24.95 17.144c1.685-.496 2.984.27 3.577 1.18.673-.232 1.331-.482 2.011-.709a2.345 2.345 0 01-.857 1.768c.685.17 1.304-.49 1.304-.49-.169 1-1.006 1.787-1.563 2.023-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.12-1.2-.857-2.531-1.574-2.457-3.774.285.328 1.067.536 1.34.472-.703-.24-1.97-3.36-.894-4.952 1.818 1.854 3.735 3.606 7.152 3.773.208-2.293 1.137-3.83 2.904-4.479z" />
+      </symbol>
+      <symbol viewBox="0 0 46 48" id="facebook-logo">
+        <path d="M29 17v-4h-4a4 4 0 00-4 4v4h-4v4h4v10h4V25h4v-4h-4v-4h4z" />
+      </symbol>
+      <symbol viewBox="0 0 46 48" id="youtube-logo">
+        <path d="M16 16h14c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H16c-1.65 0-3-1.35-3-3V19c0-1.65 1.35-3 3-3zm3.027 4.002v7.996L28.014 24l-8.987-3.998z" />
+      </symbol>
+    </svg>
 
     <header class="page-header">
 
@@ -116,7 +130,7 @@
           </picture>
         </div>
 
-        <div class="advantages__item-with-icon">
+        <div class="advantages__item-with-icon advantages__item-with-icon--home">
           <div class="advantages__icon">
             <svg class="advantages__icon--house" width="39" height="37" viewBox="0 0 39 37" fill="none">
               <path d="M15.4015 33.2194H23.7549V21.0613H15.4015V33.2194ZM22.2408 31.7441H16.9155V22.5365H22.1886V31.7441H22.2408Z" fill="#81B3D2"/>
@@ -235,22 +249,22 @@
         <ul class="page-footer__socials-list">
             <li>
               <a class="page-footer__socials-item" href="#" aria-label="Twitter">
-                <svg aria-hidden="true" focusable="false" class="page-footer__socials-item--twitter" width="45" height="48" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M24.95 17.144c1.685-.496 2.984.27 3.577 1.18.673-.232 1.331-.482 2.011-.709a2.345 2.345 0 01-.857 1.768c.685.17 1.304-.49 1.304-.49-.169 1-1.006 1.787-1.563 2.023-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.12-1.2-.857-2.531-1.574-2.457-3.774.285.328 1.067.536 1.34.472-.703-.24-1.97-3.36-.894-4.952 1.818 1.854 3.735 3.606 7.152 3.773.208-2.293 1.137-3.83 2.904-4.479z" />
+                <svg aria-hidden="true" focusable="false" width="45" height="48">
+                  <use xlink:href="#twitter-logo"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a class="page-footer__socials-item" href="#" aria-label="Facebook">
-                <svg aria-hidden="true" focusable="false" class="socials__item--facebook" width="46" height="48" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M29 17v-4h-4a4 4 0 00-4 4v4h-4v4h4v10h4V25h4v-4h-4v-4h4z" />
+                <svg aria-hidden="true" focusable="false" width="46" height="48">
+                  <use xlink:href="#facebook-logo"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a class="page-footer__socials-item" href="#" aria-label="Youtube">
-                <svg aria-hidden="true" focusable="false" class="socials__item--youtube" width="46" height="48" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16 16h14c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H16c-1.65 0-3-1.35-3-3V19c0-1.65 1.35-3 3-3zm3.027 4.002v7.996L28.014 24l-8.987-3.998z" />
+                <svg aria-hidden="true" focusable="false" width="46" height="48">
+                  <use xlink:href="#youtube-logo"></use>
                 </svg>
               </a>
             </li>
@@ -260,17 +274,12 @@
       <div class="page-footer__copyright">
         <h2 class="page-footer__copyright-text">Разработано</h2>
         <a class="page-footer__copyright-logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Academy logo">
-          <svg aria-hidden="true" focusable="false" width="27" height="35" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" fill="black"/>
+          <svg width="27" height="35" aria-hidden="true" focusable="false">
+            <use xlink:href="#copyright-logo"></use>
           </svg>
         </a>
       </div>
     </footer>
-
-    <section class="modal">
-      <h2>Форма поиска гостиницы</h2>
-      <form action="get" class="search-form" action="https://echo.htmlacademy.ru"></form>
-    </section>
 
     <script>
       var navMain = document.querySelector(".main-navigation")

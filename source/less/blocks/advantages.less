@@ -62,16 +62,20 @@
       grid-column-end: 3;
     }
   }
+
+  & img {
+    width: 100%;
+  }
 }
 
 //расположение иконки и текста в блоках с svg
 .advantages__item-with-icon {
   background-color: @basic-white;
-  padding: 27px 18px 0 21px;
+  padding: 26px 20px 0 21px;
   display: flex;
   flex-direction: row;
 
-  &:nth-of-type(2) {
+  &:nth-of-type(3) {
     padding-top: 35px;
 
     @media (min-width: @tablet-width) {
@@ -79,7 +83,7 @@
     }
   }
 
-  &:nth-of-type(4) {
+  &:nth-of-type(5) {
     padding-bottom: 34px;
 
     @media (min-width: @tablet-width) {
