@@ -77,9 +77,6 @@
                 <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
                 <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип сайта">
-
-                <!-- <img class="main-navigation__logo--tablet" src="img/logotype-tablet.svg" width="102" height="84" alt="Логотип сайта для планшетной версии">
-                <img class="main-navigation__logo--desktop" src="img/logotype-desktop.svg" width="187" height="97" alt="Логотип сайта для десктопной версии"> -->
               </picture>
             </a>
           </li>
@@ -99,6 +96,9 @@
         <div class="intro__image-index-page">
           <img class="intro__image-index-page-text" src="img/index-intro-image-text.svg" width="282" height="214" alt="Приветственная надпись">
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/back-desktop.webp 1x, img/back-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/back-tablet.webp 1x, img/back-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/back-mobile.webp 1x, img/back-mobile@2x.webp 2x">
             <source media="(min-width: 1280px)" srcset="img/back-desktop.jpg 1x, img/back-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/back-tablet.jpg 1x, img/back-tablet@2x.jpg 2x">
             <img class="intro__image-background-index-page" src="img/back-mobile.jpg" srcset="img/back-mobile@2x.jpg 2x" alt="Приветственный рисунок">
@@ -117,13 +117,16 @@
 
         <div class="advantages__item-with-image">
           <img class="advantages__top-item-triangle" src="img/intro-text-bottom-triangle.svg" width="768" height="37" alt="Декоративная нижняя граница текста интро"></img>
-          <h3 class="advantages__item-title">НАСТОЯЩИЙ<br class="desktop-break"> ГОРОДОК</h3>
+          <h3 class="advantages__item-title">НАСТОЯЩИЙ ГОРОДОК</h3>
           <p class="advantages__item-text">— №1 —</p>
           <p class="advantages__item-text">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ,<br class="desktop-break"> ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
         </div>
 
         <div class="advantages__image">
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-city-desktop.webp 1x, img/photo-city-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-city-tablet.webp 1x, img/photo-city-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/photo-city-mobile.webp 1x, img/photo-city-mobile@2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/photo-city-desktop.jpg 1x, img/photo-city-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/photo-city-tablet.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
             <img src="img/photo-city-mobile.jpg" srcset="img/photo-city-mobile@2x.jpg 2x" alt="Фотография городка">

@@ -104,11 +104,21 @@
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    padding: 61px 40px 8px;
+    padding: 38px 18px 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 110px 0 43px 0;
+    padding-top: 55px;
+  }
+
+  &--form {
+    @media (min-width: @tablet-width) {
+      padding-top: 62px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 110px;
+    }
   }
 
   &--catalog {
