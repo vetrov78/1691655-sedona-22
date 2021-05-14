@@ -58,7 +58,7 @@
   object-fit: cover;
 
   @media (min-width: @tablet-width) {
-    height: 256px;
+    height: auto;
     grid-column: span 2;
 
     &:nth-of-type(7) {
@@ -69,6 +69,7 @@
   }
 
   & img {
+    height: 100%;
     width: 100%;
   }
 }
