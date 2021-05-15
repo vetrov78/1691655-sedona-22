@@ -200,8 +200,6 @@
           </picture>
         </div>
 
-
-
         <div class="advantages__item">
           <h3 class="advantages__item-title">НЕБОЛЬШАЯ<br class="tablet-break"><br class="desktop-break"> ПЛОЩАДЬ</h3>
           <p class="advantages__item-text">— №3 —</p>
@@ -231,7 +229,6 @@
       <button class="page-main__search-button">НАЙТИ гостиницу</button>
 
       <div class="page-main__map">
-        <!-- <img class="page-main__map-image" src="img/map.jpg" width="1200" height="350" alt="Карта"> -->
         <iframe
           class="page-main__map-iframe"
           frameborder="0"
@@ -286,23 +283,6 @@
       </div>
     </footer>
 
-    <script>
-      var navMain = document.querySelector(".main-navigation")
-      var navToggle = document.querySelector(".main-navigation__toggle");
-
-      navMain.classList.remove("main-navigation--nojs");
-      navMain.classList.remove("main-navigation--opened");
-      navMain.classList.add("main-navigation--closed");
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains("main-navigation--closed")) {
-          navMain.classList.add("main-navigation--opened");
-          navMain.classList.remove("main-navigation--closed");
-        } else {
-          navMain.classList.remove("main-navigation--opened");
-          navMain.classList.add("main-navigation--closed");
-        }
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

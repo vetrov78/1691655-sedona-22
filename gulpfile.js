@@ -5,10 +5,11 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const csso = require("postcss-csso");
 const autoprefixer = require("autoprefixer");
-const htmlmin = require("gulp-htmlmin");
-const sync = require("browser-sync").create();
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
+const minify = require("gulp-minify");
+const htmlmin = require("gulp-htmlmin");
+const sync = require("browser-sync").create();
 const rename = require("gulp-rename");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
@@ -52,6 +53,7 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
+    .pipe(gulp.dest("build/css"))
     .pipe(postcss([
       autoprefixer(),
       csso()
@@ -71,6 +73,15 @@ const html = () => {
     .pipe(gulp.dest("build"));
 }
 exports.html = html;
+
+//JS minifier
+const jsMin = () => {
+  return gulp
+    .src("source/js/*.js")
+    .pipe(minify())
+    .pipe(gulp.dest("build/js"))
+}
+exports.jsMin = jsMin;
 
 // Server
 const server = (done) => {
@@ -94,7 +105,8 @@ const reload = (done) => {
 
 // Watcher
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
+  gulp.watch("source/less/**/*.less", gulp.series(styles));
+  gulp.watch("source/js/**/*.js", gulp.series(jsMin));
   //gulp.watch("source/*.html").on("change", reload);
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
@@ -122,14 +134,22 @@ const build = gulp
   .series(
     clean,
     copy,
-    images,
-    createWebp,
-    styles,
-    sprite,
-    html
+    gulp.parallel(
+      images,
+      createWebp,
+      styles,
+      sprite,
+      jsMin,
+      html
+    )
   );
 exports.build = build;
 
-exports.default = gulp.series(
-  build, server, watcher
+exports.default = gulp
+.series(
+  build,
+  gulp.parallel(
+    server,
+    watcher
+  )
 );
