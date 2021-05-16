@@ -70,7 +70,8 @@ const html = () => {
   return gulp
     .src("source/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("build"))
+    .pipe(sync.stream());
 }
 exports.html = html;
 
@@ -80,6 +81,7 @@ const jsMin = () => {
     .src("source/js/*.js")
     .pipe(minify())
     .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
 }
 exports.jsMin = jsMin;
 
@@ -107,8 +109,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/js/**/*.js", gulp.series(jsMin));
-  //gulp.watch("source/*.html").on("change", reload);
-  gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch("source/*.html", gulp.series(html));
 }
 
 //Clean build folder
@@ -147,9 +148,8 @@ exports.build = build;
 
 exports.default = gulp
 .series(
-  build,
-  gulp.parallel(
-    server,
-    watcher
-  )
+  //build,
+  server,
+  watcher
+
 );
