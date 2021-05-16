@@ -69,6 +69,7 @@
   }
 
   & img {
+    display: block;
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -87,6 +88,10 @@
 
     @media (min-width: @tablet-width) {
       padding-top: 60px;
+
+      & .advantages__item-text {
+        padding: 0 40px;
+      }
     }
   }
 
@@ -95,6 +100,10 @@
 
     @media (min-width: @tablet-width) {
       padding-bottom: 60px;
+
+      & .advantages__item-text {
+        padding: 0 50px;
+      }
     }
   }
 
@@ -199,6 +208,14 @@
     padding: 40px 20px 20px;
     min-height: 256px;
   }
+
+  &:nth-of-type(9) {
+    @media (min-width: @tablet-width) {
+      & .advantages__item-text-description {
+        padding: 0 30px;
+      }
+    }
+  }
 }
 
 .advantages__item-title {
@@ -226,6 +243,11 @@
 .advantages__item-text-description {
   margin-bottom: 28px;
   padding: 0 12px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 22px;
+    padding: 0 20px;
+  }
 }
 
 .advantages__item-bottom-line {
