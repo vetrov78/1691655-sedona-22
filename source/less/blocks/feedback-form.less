@@ -514,6 +514,24 @@
     padding-left: 49px;
     padding-right: 60px;
   }
+
+  &:hover {
+    background-color: @blue;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+    background-color: @blue;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @light-black;
+  }
+
+  &:active {
+    background-color: @dark-blue;
+    color: @active-link-text;
+  }
 }
 
 .feedback-form__bottom-text {

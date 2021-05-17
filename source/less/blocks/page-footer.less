@@ -88,9 +88,13 @@
     background-color: @blue;
   }
 
-  &:focus {
+  &:focus:not(:focus-visible) {
     outline: none;
     background-color: @blue;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @light-black;
   }
 
   &:active {
