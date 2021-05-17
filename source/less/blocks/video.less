@@ -117,21 +117,21 @@
   @media (min-width: @desktop-width) {
     width: 540px;
   }
+}
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: -3px;
-    left: 36px;
-    display: block;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: @basic-white;
+.video__controls-current-pos {
+  position: absolute;
+  top: 19px;
+  left: 57px;
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: @basic-white;
 
-    @media (min-width: @tablet-width) {
-      left: 112px;
-    }
+  @media (min-width: @tablet-width) {
+    left: 154px;
+    top: 42px;
   }
 }
 
@@ -141,6 +141,11 @@
   & svg {
     display: block;
     fill: @replay-icon;
+  }
+
+  & svg:focus {
+    outline: none;
+    fill: @light-black;
   }
 
   & svg:hover {
