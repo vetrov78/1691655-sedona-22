@@ -71,12 +71,12 @@
               HTML ACADEMY
             </a>
           </li >
-          <li class="main-navigation__item--logo">
+          <li class="main-navigation__item main-navigation__item--logo">
             <a class="main-navigation__logo-link" href="index.html" aria-label="Элемент навигации логотип сайта, ссылка на главную страницу">
               <picture>
                 <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
-                <img class="main-navigation__logo--mobile" src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип сайта">
+                <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип сайта">
               </picture>
             </a>
           </li>
@@ -134,8 +134,8 @@
             <legend class="feedback-form__legend">контактная информация:</legend>
 
             <label class="feedback-form__label" for="phone">
-              <span class="feedback-form__label--till-desktop">контактный&nbsp;телефон*:</span>
-              <span class="feedback-form__label--since-desktop">телефон*:</span>
+              <span class="feedback-form__label-till-desktop">контактный&nbsp;телефон*:</span>
+              <span class="feedback-form__label-since-desktop">телефон*:</span>
               <input class="feedback-form__input" size="10" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" id="phone" placeholder="Введите телефон" required  aria-label="Введите телефон">
               <svg class="feedback-form__icon" width="58" height="58">
                 <path d="M58 0H0v58h58V0z"/>
@@ -244,7 +244,7 @@
     <section class="visually-hidden modal modal--failture" >
       <h2 class="modal__title">ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
       <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="modal__button modal__button--failture" type="button" autofocus aria-label="Кнопка закрытия модального окна что-то не так">OK</button>
+      <button class="modal__button modal__button--failture" type="button" aria-label="Кнопка закрытия модального окна что-то не так">OK</button>
     </section>
 
     <section class="visually-hidden modal modal--success">
