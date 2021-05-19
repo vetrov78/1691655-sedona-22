@@ -54,28 +54,34 @@
 //блок интро на остальных страницах (изменен текст и размер контейнера)
 .intro__image-other-page {
   background-color: @blue;
+  background-image: url("../img/back-mobile.jpg");
   position: relative;
-  min-width: 320px;
+  background-size: 100% auto;
+  background-position: center bottom;
   height: 158px;
 
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/back-mobile@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
+    background-image: url("../img/back-tablet.jpg");
+    background-size: 100% auto;
     height: 290px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/back-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
-    width: 100%;
+    background-image: url("../img/back-desktop.jpg");
     height: 301px;
-  }
-}
 
-.intro__image-background-other-page {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  transform: translateX(-50%);
-  object-fit: cover;
-  object-position: center bottom;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/back-desktop@2x.jpg");
+    }
+  }
 }
 
 .intro__image-other-page-text {
